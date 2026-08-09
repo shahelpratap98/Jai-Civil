@@ -9,12 +9,12 @@ import { SERVICES } from '../data/services';
 import { SITE, whatsappLink } from '../siteConfig';
 
 /**
- * PLACEHOLDER hero clip (approved for build-out): reused from an earlier
- * Higgsfield generation. A Jai Civil specific seamless loop will replace it
- * once the user signs off on the generation prompt and credits.
+ * Jai Civil hero loop: MiniMax H3, 8s at 2K, generated 2026-08-09 with the
+ * same golden-hour excavator frame as both start and end frame so the loop
+ * is seamless. (Seedance 2.0 is plan-gated on this account.)
  */
 const HERO_VIDEO =
-  'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260403_050628_c4e32401-fab4-4a27-b7a8-6e9291cd5959.mp4';
+  'https://d8j0ntlcm91z4.cloudfront.net/user_3GTgbmyOrlz5SGL0IBoBX8aS8A4/hf_20260809_092955_0b285e63-ca74-4f13-9368-63049d0a08c5.mp4';
 
 export default function Home() {
   return (
