@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import AnimatedHeading from '../components/AnimatedHeading';
 import FadeIn from '../components/FadeIn';
 import Reveal from '../components/Reveal';
+import QuoteForm from '../components/QuoteForm';
 import ServiceIcon from '../components/ServiceIcon';
 import { SERVICES } from '../data/services';
 import { SITE, whatsappLink } from '../siteConfig';
@@ -82,13 +83,12 @@ export default function Home() {
                   </div>
                 </FadeIn>
               </div>
-              <div className="mt-10 flex items-end justify-start lg:mt-0 lg:justify-end">
-                <FadeIn delay={1400} duration={1000}>
-                  <div className="liquid-glass rounded-xl border border-white/20 px-6 py-3">
-                    <p className="text-lg font-light md:text-xl lg:text-2xl">
-                      Earthworks. Roading. Building.
-                    </p>
-                  </div>
+              <div className="mt-10 flex flex-col items-stretch gap-3 lg:mt-0 lg:items-end">
+                <FadeIn delay={1400} duration={1000} className="w-full lg:max-w-md">
+                  <p className="mb-3 hidden text-right text-sm font-light text-gray-300 lg:block">
+                    Earthworks. Roading. Building.
+                  </p>
+                  <QuoteForm />
                 </FadeIn>
               </div>
             </div>

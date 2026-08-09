@@ -31,17 +31,18 @@ export default async function handler(req, res) {
   // Honeypot: a filled hidden field means a bot. Accept it so it does not retry.
   if (website) return res.status(200).json({ ok: true });
 
-  if (!name || !email || !message) {
-    return res.status(400).json({ error: 'Please fill in your name, email and message.' });
+  // The hero quote form sends phone OR email; the contact page sends email.
+  if (!name || (!email && !phone)) {
+    return res.status(400).json({ error: 'Please fill in your name and a phone number or email.' });
   }
 
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return res.status(400).json({ error: 'That email address does not look right.' });
   }
 
   const rows = [
     ['Name', name],
-    ['Email', email],
+    ['Email', email || 'Not given'],
     ['Phone', phone || 'Not given'],
     ['Service', service || 'Not specified'],
   ];
@@ -52,7 +53,7 @@ export default async function handler(req, res) {
     const { error } = await resend.emails.send({
       from: CONTACT_FROM_EMAIL,
       to: CONTACT_TO_EMAIL,
-      replyTo: email,
+      ...(email ? { replyTo: email } : {}),
       subject: `Website enquiry: ${name}${service ? ` (${service})` : ''}`,
       html: `
         <h2 style="font-family:sans-serif">New enquiry from the Jai Civil website</h2>
