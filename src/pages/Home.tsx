@@ -10,12 +10,13 @@ import { SERVICES } from '../data/services';
 import { SITE, whatsappLink } from '../siteConfig';
 
 /**
- * Jai Civil hero loop: MiniMax H3, 8s at 2K, generated 2026-08-09 with the
- * same golden-hour excavator frame as both start and end frame so the loop
- * is seamless. (Seedance 2.0 is plan-gated on this account.)
+ * Jai Civil hero loop: MiniMax H3, 8s, generated 2026-08-09 with the same
+ * golden-hour excavator frame as start and end frame so the loop is seamless.
+ * Self-hosted after `npm run compress:video` (the 2K ~18 Mbps master lagged;
+ * this is the 1080p ~3.6 MB re-encode). Master kept in video-src/.
  */
-const HERO_VIDEO =
-  'https://d8j0ntlcm91z4.cloudfront.net/user_3GTgbmyOrlz5SGL0IBoBX8aS8A4/hf_20260809_092955_0b285e63-ca74-4f13-9368-63049d0a08c5.mp4';
+const HERO_VIDEO = '/jai-hero.mp4';
+const HERO_POSTER = '/jai-hero-poster.jpg';
 
 /** Hero clip playback speed. The 8s loop reads calmer at half speed. */
 const HERO_PLAYBACK_RATE = 0.5;
@@ -37,6 +38,7 @@ export default function Home() {
           ref={videoRef}
           className="absolute inset-0 h-full w-full object-cover"
           src={HERO_VIDEO}
+          poster={HERO_POSTER}
           autoPlay
           loop
           muted

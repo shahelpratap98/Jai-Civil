@@ -1,5 +1,9 @@
 # dependencies
 /node_modules
+
+# heavy video masters (re-download from Higgsfield or regenerate; only the
+# compressed public/jai-hero.mp4 is committed)
+/video-src
 /.pnp
 .pnp.*
 
