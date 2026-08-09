@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
@@ -16,12 +17,24 @@ import { SITE, whatsappLink } from '../siteConfig';
 const HERO_VIDEO =
   'https://d8j0ntlcm91z4.cloudfront.net/user_3GTgbmyOrlz5SGL0IBoBX8aS8A4/hf_20260809_092955_0b285e63-ca74-4f13-9368-63049d0a08c5.mp4';
 
+/** Hero clip playback speed. The 8s loop reads calmer at half speed. */
+const HERO_PLAYBACK_RATE = 0.5;
+
 export default function Home() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Imperative, not just onLoadedMetadata: the <video> is prerendered, so
+  // loadedmetadata can fire before React hydrates and attaches listeners.
+  useEffect(() => {
+    if (videoRef.current) videoRef.current.playbackRate = HERO_PLAYBACK_RATE;
+  }, []);
+
   return (
     <>
       {/* Hero: raw video background, no overlay of any kind. */}
       <div className="relative flex flex-col min-h-dvh">
         <video
+          ref={videoRef}
           className="absolute inset-0 h-full w-full object-cover"
           src={HERO_VIDEO}
           autoPlay
@@ -29,6 +42,9 @@ export default function Home() {
           muted
           playsInline
           aria-hidden="true"
+          onLoadedMetadata={(e) => {
+            e.currentTarget.playbackRate = HERO_PLAYBACK_RATE;
+          }}
         />
         <div className="relative z-10 flex flex-1 flex-col">
           <Header />
