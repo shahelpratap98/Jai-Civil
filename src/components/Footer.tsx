@@ -8,9 +8,10 @@ export default function Footer() {
     <footer className="border-t border-sand-50/10 mt-24">
       <div className="px-6 md:px-12 lg:px-16 py-14 grid gap-10 md:grid-cols-3">
         <div>
-          <p className="text-2xl font-semibold tracking-tight mb-3">JAI CIVIL</p>
+          <p className="text-2xl font-semibold tracking-tight mb-3">JAI CIVIL LIMITED</p>
           <p className="text-sand-300 text-sm leading-relaxed max-w-xs">
-            Papakura based civil, earthworks and building contractor serving greater Auckland.
+            Papakura based civil, earthworks and building contractor. Auckland and New Zealand
+            wide.
           </p>
           <div className="mt-5 space-y-2 text-sm text-sand-300">
             <a href={SITE.phoneHref} className="flex items-center gap-2 hover:text-sand-50 transition-colors">
@@ -52,6 +53,7 @@ export default function Footer() {
             {SITE.areas.map((area) => (
               <li key={area}>{area}</li>
             ))}
+            <li className="pt-1 text-sand-100">+ New Zealand wide</li>
           </ul>
         </div>
       </div>

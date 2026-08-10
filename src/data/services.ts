@@ -5,7 +5,7 @@
  * Copy rules (SEO playbook): no invented stats, prices, review counts or
  * certifications. Everything stated here comes from what the company publicly
  * says about itself: civil and earthworks, roads, LBP building, renovations,
- * kitchens, electrical, landscaping, serving greater Auckland from Papakura.
+ * kitchens, landscaping, retaining and decks, Papakura based, Auckland and NZ wide.
  */
 
 export type Faq = { question: string; answer: string };
@@ -14,7 +14,7 @@ export type Service = {
   slug: string;
   name: string;
   /** Icon name from lucide-react, resolved in components. */
-  icon: 'Mountain' | 'Route' | 'LandPlot' | 'Trees' | 'HardHat' | 'Hammer' | 'Zap';
+  icon: 'Mountain' | 'Route' | 'LandPlot' | 'Trees' | 'HardHat' | 'Hammer' | 'Layers' | 'Fence';
   /** Card blurb on the index and home page. */
   short: string;
   seoTitle: string;
@@ -59,7 +59,7 @@ export const SERVICES: Service[] = [
       {
         question: 'Which areas do you cover for earthworks?',
         answer:
-          'We are based in Papakura and work across greater Auckland, including Manukau, Franklin, the North Shore, Waitākere, Rodney and Waiheke Island.',
+          'We are based in Papakura and work across greater Auckland, including Manukau, Franklin, the North Shore, Waitākere, Rodney and Waiheke Island, and we travel New Zealand wide for larger projects.',
       },
       {
         question: 'Can you work to engineered drawings?',
@@ -191,6 +191,88 @@ export const SERVICES: Service[] = [
     ],
   },
   {
+    slug: 'retaining-walls',
+    name: 'Retaining Walls',
+    icon: 'Layers',
+    short:
+      'Timber, concrete and block retaining walls, engineered where required, with the drainage behind them done properly.',
+    seoTitle: 'Retaining Wall Builders Auckland',
+    metaDescription:
+      'Retaining wall construction in Auckland and New Zealand wide. Timber, concrete and block walls with proper drainage, built by a civil and earthworks contractor. Free quotes.',
+    h1: 'Retaining walls built to hold',
+    intro: [
+      'A retaining wall is only as good as what you cannot see: the founding, the drainage behind it and the compaction around it. As an earthworks and civil contractor, Jai Civil builds retaining walls from the ground conditions up, not just from the timber out.',
+      'We build walls for driveways, building platforms, section boundaries and slips, from Papakura across Auckland and New Zealand wide for larger projects.',
+    ],
+    includesTitle: 'Retaining wall work we do',
+    includes: [
+      'Timber pole and timber post walls',
+      'Concrete and masonry block walls',
+      'Engineered walls to producer statements',
+      'Subsoil drainage and backfill behind every wall',
+      'Excavation, benching and site reinstatement',
+      'Slip repairs and wall replacements',
+    ],
+    faqs: [
+      {
+        question: 'Does my retaining wall need a consent?',
+        answer:
+          'In most of New Zealand a wall over 1.5 metres, or one supporting a surcharge like a driveway or building, needs engineering input and building consent. We tell you straight away which side of the line your wall sits on and work with the engineer where needed.',
+      },
+      {
+        question: 'Why do retaining walls fail?',
+        answer:
+          'Almost always water: no drainage behind the wall, so the ground swells and pushes it over. Every wall we build gets subsoil drainage and free draining backfill as standard.',
+      },
+      {
+        question: 'Timber, block or concrete: which should I choose?',
+        answer:
+          'Timber is usually the most economical for boundary and garden walls; concrete and block suit higher walls, tight sites and walls that carry load. We quote the option that fits the ground and the budget, not the dearest one.',
+      },
+    ],
+  },
+  {
+    slug: 'decks-outdoor-living',
+    name: 'Decks & Outdoor Living',
+    icon: 'Fence',
+    short:
+      'Decks, pergolas and outdoor living areas, built under an LBP with the groundwork and drainage handled by the same crew.',
+    seoTitle: 'Deck Builders & Outdoor Living Auckland',
+    metaDescription:
+      'Deck building and outdoor living areas in Auckland and New Zealand wide. Decks, pergolas, patios and landscaped outdoor spaces built under an LBP by Jai Civil. Free quotes.',
+    h1: 'Decks and outdoor living areas',
+    intro: [
+      'A good outdoor area is part build, part groundwork. Jai Civil designs and builds decks, pergolas and outdoor living spaces with the advantage that the excavation, drainage and landscaping around them are done by the same crew, in the same job.',
+      'Building work is carried out under a Licensed Building Practitioner, which matters for larger and higher decks where the structure is restricted building work.',
+    ],
+    includesTitle: 'Outdoor living work we build',
+    includes: [
+      'Timber and composite decks',
+      'Pergolas, louvres and shade structures',
+      'Patios, paths and paved areas',
+      'Outdoor steps and platforms on sloped sections',
+      'Drainage and ground preparation around outdoor areas',
+      'Landscaping to finish the space',
+    ],
+    faqs: [
+      {
+        question: 'Do decks need building consent?',
+        answer:
+          'In New Zealand a deck generally needs consent when it is more than 1.5 metres above ground, and lower decks still have to meet the Building Code. Our LBP cover means the structural side is done and documented properly either way.',
+      },
+      {
+        question: 'Timber or composite decking?',
+        answer:
+          'Timber costs less up front and can be re-sanded; composite costs more but skips the oiling and staining. We price both if you are weighing it up.',
+      },
+      {
+        question: 'Can you handle a sloped or difficult section?',
+        answer:
+          'Yes, that is where we are strongest. We bring earthmoving gear and retaining experience, so decks and outdoor areas on slopes, fill or soft ground are engineered and built as one piece of work.',
+      },
+    ],
+  },
+  {
     slug: 'building',
     name: 'LBP Building',
     icon: 'HardHat',
@@ -269,47 +351,6 @@ export const SERVICES: Service[] = [
         question: 'Who handles the electrical side of a renovation?',
         answer:
           'We coordinate electrical work within the same project, so the wiring, switchboard and fit off are planned with the build instead of after it.',
-      },
-    ],
-  },
-  {
-    slug: 'electrical',
-    name: 'Electrical',
-    icon: 'Zap',
-    short:
-      'Electrical work for renovations, new builds and property upgrades, coordinated with the building work around it.',
-    seoTitle: 'Electrical Services South Auckland',
-    metaDescription:
-      'Electrical services in Papakura and across Auckland as part of Jai Civil building and renovation projects. Wiring, lighting and power for renovations, kitchens and new builds.',
-    h1: 'Electrical work, coordinated with the build',
-    intro: [
-      'Electrical work rarely happens in isolation. It is part of a renovation, a new kitchen, a sleepout or a new build. Jai Civil offers electrical services alongside our building and renovation work so that wiring is planned with the project, not bolted on at the end.',
-      'All electrical work is carried out in line with New Zealand electrical safety requirements, with the certification the law requires for the work done.',
-    ],
-    includesTitle: 'Electrical services',
-    includes: [
-      'Wiring for renovations and alterations',
-      'Kitchen and appliance circuits',
-      'Lighting design and installation',
-      'Power points, switches and fit offs',
-      'Wiring for sleepouts and minor dwellings',
-      'Trenching for underground power, done with our own machines',
-    ],
-    faqs: [
-      {
-        question: 'Do you take on standalone electrical jobs?',
-        answer:
-          'Our electrical work is normally part of a building, renovation or site project. Get in touch with what you need and we will tell you honestly whether we are the right fit.',
-      },
-      {
-        question: 'Is the electrical work certified?',
-        answer:
-          'Yes. Electrical work in New Zealand must be done and certified in line with electrical safety regulations, and that certification is part of the job.',
-      },
-      {
-        question: 'Can you run power to a new sleepout or shed?',
-        answer:
-          'Yes, and this is where one crew pays off: we dig the trench, lay the ducting and handle the wiring as one piece of work.',
       },
     ],
   },

@@ -192,7 +192,7 @@ export default function Contact() {
               {SITE.hours}
             </p>
             <p className="pt-2 border-t border-sand-50/10">
-              Serving {SITE.areas.slice(0, -1).join(', ')} and {SITE.areas[SITE.areas.length - 1]}.
+              Serving {SITE.areas.join(', ')}, and New Zealand wide for larger projects.
             </p>
           </div>
         </div>

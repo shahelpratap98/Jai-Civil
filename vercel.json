@@ -2,6 +2,9 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/services/electrical", "destination": "/services", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/jai-hero.mp4",

@@ -74,8 +74,8 @@ export default function Home() {
                 />
                 <FadeIn delay={800} duration={1000}>
                   <p className="text-base md:text-lg text-sand-300 mb-5">
-                    Earthworks, roading and civil construction across Auckland, with licensed
-                    building trades under one roof.
+                    Earthworks, roading and civil construction, Auckland and New Zealand wide,
+                    with licensed building trades under one roof.
                   </p>
                 </FadeIn>
                 <FadeIn delay={1200} duration={1000}>
@@ -116,13 +116,13 @@ export default function Home() {
           </h2>
           <p className="text-sand-300 leading-relaxed mb-4">
             Jai Civil Limited is a Papakura based contractor that covers the whole chain: we cut
-            and prepare the site, build the driveway, put up the structure under a Licensed
-            Building Practitioner and wire it. No handover gaps between an earthworks company, a
-            builder and an electrician, because we are all three.
+            and prepare the site, build the driveway and put up the structure under a Licensed
+            Building Practitioner. No handover gaps between an earthworks company and a builder,
+            because we are both.
           </p>
           <p className="text-sand-300 leading-relaxed">
-            We work across greater Auckland, from Papakura and Franklin to the North Shore,
-            Rodney and Waiheke Island.
+            We work across greater Auckland, from Papakura and Franklin to the North Shore and
+            Waiheke Island, and travel New Zealand wide for the right projects.
           </p>
         </Reveal>
       </section>
@@ -168,7 +168,8 @@ export default function Home() {
             Areas we serve
           </h2>
           <p className="max-w-2xl text-sand-300 leading-relaxed mb-8">
-            Based in {SITE.address.suburb}, working across the whole Auckland region.
+            Based in {SITE.address.suburb}, working across the whole Auckland region, and New
+            Zealand wide for larger projects.
           </p>
           <ul className="flex flex-wrap gap-3">
             {SITE.areas.map((area) => (
@@ -179,6 +180,9 @@ export default function Home() {
                 {area}
               </li>
             ))}
+            <li className="liquid-glass rounded-lg border border-clay-400/40 px-4 py-2 text-sm text-clay-400">
+              + New Zealand wide
+            </li>
           </ul>
         </Reveal>
       </section>

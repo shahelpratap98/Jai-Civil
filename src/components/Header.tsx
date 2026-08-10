@@ -15,8 +15,12 @@ export default function Header() {
   return (
     <div className="px-6 md:px-12 lg:px-16 pt-6 relative z-40">
       <nav className="liquid-glass rounded-xl px-4 py-2 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-semibold tracking-tight" onClick={() => setOpen(false)}>
-          JAI CIVIL
+        <Link
+          to="/"
+          className="text-xl sm:text-2xl font-semibold tracking-tight whitespace-nowrap"
+          onClick={() => setOpen(false)}
+        >
+          JAI CIVIL LIMITED
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm">

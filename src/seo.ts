@@ -15,16 +15,16 @@ const suffix = ` | ${SITE.shortName}`;
 export const ROUTES: RouteMeta[] = [
   {
     path: '/',
-    title: 'Jai Civil: Earthworks & Civil Construction Auckland',
+    title: 'Jai Civil Limited: Earthworks & Civil Construction NZ',
     description:
-      'Papakura based civil and earthworks contractor serving greater Auckland. Earthworks, roading, driveways, site preparation, LBP building, renovations and electrical. Free quotes.',
+      'Papakura based civil and earthworks contractor, Auckland and New Zealand wide. Earthworks, roading, driveways, retaining walls, decks, LBP building and renovations. Free quotes.',
     priority: 1.0,
   },
   {
     path: '/services',
     title: `Civil, Earthworks & Building Services Auckland${suffix}`,
     description:
-      'Earthworks, roading and driveways, site preparation, landscaping, LBP building, renovations, kitchens and electrical across Auckland from one Papakura based crew.',
+      'Earthworks, roading and driveways, site preparation, retaining walls, landscaping, decks, LBP building and renovations. One Papakura based crew, Auckland and New Zealand wide.',
     priority: 0.9,
   },
   {
@@ -72,7 +72,10 @@ export function schemasFor(path: string): object[] {
       postalCode: SITE.address.postcode,
       addressCountry: 'NZ',
     },
-    areaServed: { '@type': 'City', name: 'Auckland', addressCountry: 'NZ' },
+    areaServed: [
+      { '@type': 'City', name: 'Auckland', addressCountry: 'NZ' },
+      { '@type': 'Country', name: 'New Zealand' },
+    ],
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -96,7 +99,10 @@ export function schemasFor(path: string): object[] {
         name: service.name,
         serviceType: service.name,
         description: service.metaDescription,
-        areaServed: { '@type': 'City', name: 'Auckland', addressCountry: 'NZ' },
+        areaServed: [
+          { '@type': 'City', name: 'Auckland', addressCountry: 'NZ' },
+          { '@type': 'Country', name: 'New Zealand' },
+        ],
         provider: { '@type': 'LocalBusiness', name: SITE.name, url: SITE.url },
       });
       schemas.push({
