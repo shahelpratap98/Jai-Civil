@@ -92,30 +92,30 @@ export default function QuoteForm() {
     }
   }
 
-  const label = 'mb-1.5 block text-[11px] font-medium tracking-[0.14em] text-gray-200';
+  const label = 'mb-1.5 block text-[11px] font-medium tracking-[0.14em] text-sand-200';
   // 16px, not smaller: iOS auto-zooms the page when a focused input is under 16px.
   const field =
-    'w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-[16px] text-white placeholder:text-gray-500 min-h-[44px] outline-none transition-colors focus:border-white/60';
+    'w-full rounded-lg border border-sand-50/20 bg-sand-50/10 px-4 py-2.5 text-[16px] text-sand-50 placeholder:text-sand-500 min-h-[44px] outline-none transition-colors focus:border-sand-50/60';
   const errorClass = 'mt-1.5 text-[12px] text-red-300';
 
   if (status === 'sent') {
     return (
       <div
-        className="liquid-glass rounded-xl border border-white/20 p-6 text-center"
+        className="liquid-glass rounded-xl border border-sand-50/20 p-6 text-center"
         role="status"
         aria-live="polite"
       >
-        <div className="mx-auto mb-3 grid h-11 w-11 place-items-center rounded-full bg-white/10">
+        <div className="mx-auto mb-3 grid h-11 w-11 place-items-center rounded-full bg-sand-50/10">
           <Check size={20} aria-hidden="true" />
         </div>
         <p className="font-medium">Quote request sent</p>
-        <p className="mt-1.5 text-[13px] leading-relaxed text-gray-300">
+        <p className="mt-1.5 text-[13px] leading-relaxed text-sand-300">
           Thanks {values.name.split(' ')[0]}, we will be in touch shortly. Need us sooner?{' '}
           <a
             href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-2 hover:text-white"
+            className="underline underline-offset-2 hover:text-sand-50"
           >
             WhatsApp us
           </a>
@@ -131,12 +131,12 @@ export default function QuoteForm() {
       onSubmit={onSubmit}
       noValidate
       aria-labelledby={`${uid}-heading`}
-      className="liquid-glass rounded-xl border border-white/20 p-5 sm:p-6"
+      className="liquid-glass rounded-xl border border-sand-50/20 p-5 sm:p-6"
     >
       <h2 id={`${uid}-heading`} className="text-[17px] font-semibold tracking-tight">
         Get a free quote
       </h2>
-      <p className="mt-1 text-[13px] leading-relaxed text-gray-300">
+      <p className="mt-1 text-[13px] leading-relaxed text-sand-300">
         Tell us the basics and we will come back to you. No obligation.
       </p>
 
@@ -229,15 +229,15 @@ export default function QuoteForm() {
             aria-describedby={errors.service ? `${uid}-service-err` : undefined}
             className={`${field} appearance-none`}
           >
-            <option value="" className="bg-black">
+            <option value="" className="bg-soil-900">
               Select a service…
             </option>
             {SERVICES.map((s) => (
-              <option key={s.slug} value={s.name} className="bg-black">
+              <option key={s.slug} value={s.name} className="bg-soil-900">
                 {s.name}
               </option>
             ))}
-            <option value="Something else" className="bg-black">
+            <option value="Something else" className="bg-soil-900">
               Something else
             </option>
           </select>
@@ -251,7 +251,7 @@ export default function QuoteForm() {
 
       <div className="mt-3">
         <label className={label} htmlFor={`${uid}-notes`}>
-          ANYTHING ELSE? <span className="tracking-normal text-gray-400">(optional)</span>
+          ANYTHING ELSE? <span className="tracking-normal text-sand-400">(optional)</span>
         </label>
         <textarea
           id={`${uid}-notes`}
@@ -284,7 +284,7 @@ export default function QuoteForm() {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="mt-4 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-white px-8 py-3 font-medium text-black transition-colors hover:bg-gray-100 disabled:opacity-60"
+        className="mt-4 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-sand-100 px-8 py-3 font-medium text-soil-950 transition-colors hover:bg-sand-200 disabled:opacity-60"
       >
         {status === 'sending' ? (
           <>
@@ -296,13 +296,13 @@ export default function QuoteForm() {
         )}
       </button>
 
-      <p className="mt-3 flex items-center justify-center gap-2 text-[13px] text-gray-300">
+      <p className="mt-3 flex items-center justify-center gap-2 text-[13px] text-sand-300">
         Prefer to chat?{' '}
         <a
           href={whatsappLink()}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-medium text-white underline-offset-2 hover:underline"
+          className="font-medium text-sand-50 underline-offset-2 hover:underline"
         >
           WhatsApp us
         </a>

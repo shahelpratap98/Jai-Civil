@@ -54,7 +54,7 @@ export default function Projects() {
           >
             Our projects
           </h1>
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+          <p className="text-sand-300 text-base md:text-lg leading-relaxed">
             The kind of work Jai Civil takes on across Auckland, from {SITE.address.suburb} out
             to the wider region. We are compiling a photo gallery of recent jobs; in the
             meantime, message us and we will send photos of work relevant to your project.
@@ -66,12 +66,12 @@ export default function Projects() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {PROJECT_TYPES.map((project) => (
             <Reveal key={project.title}>
-              <div className="liquid-glass flex h-full flex-col rounded-xl border border-white/20 p-6">
+              <div className="liquid-glass flex h-full flex-col rounded-xl border border-sand-50/20 p-6">
                 <h2 className="text-lg font-medium mb-2">{project.title}</h2>
-                <p className="text-sm leading-relaxed text-gray-300 mb-5">{project.body}</p>
+                <p className="text-sm leading-relaxed text-sand-300 mb-5">{project.body}</p>
                 <Link
                   to={`/services/${project.service}`}
-                  className="group mt-auto inline-flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-white"
+                  className="group mt-auto inline-flex items-center gap-2 text-sm text-sand-300 transition-colors hover:text-sand-50"
                 >
                   About this service
                   <ArrowRight
@@ -88,11 +88,11 @@ export default function Projects() {
 
       <section className="px-6 md:px-12 lg:px-16 pt-20">
         <Reveal>
-          <div className="liquid-glass rounded-xl border border-white/20 px-8 py-10 md:px-12">
+          <div className="liquid-glass rounded-xl border border-sand-50/20 px-8 py-10 md:px-12">
             <h2 className="text-2xl md:text-3xl font-normal mb-3" style={{ letterSpacing: '-0.03em' }}>
               Want to see examples of our work?
             </h2>
-            <p className="max-w-xl text-gray-300 leading-relaxed mb-6">
+            <p className="max-w-xl text-sand-300 leading-relaxed mb-6">
               WhatsApp us what you are planning and we will send through photos of similar jobs
               we have done, along with an honest read on yours.
             </p>
@@ -101,13 +101,13 @@ export default function Projects() {
                 href={whatsappLink('Hi Jai Civil, could you send me some examples of your work? My project: ')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-black px-8 py-3 rounded-lg font-medium transition-colors hover:bg-gray-100"
+                className="bg-sand-100 text-soil-950 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-200"
               >
                 WhatsApp {SITE.phoneDisplay}
               </a>
               <Link
                 to="/contact"
-                className="liquid-glass border border-white/20 text-white px-8 py-3 rounded-lg font-medium transition-colors hover:bg-white hover:text-black"
+                className="liquid-glass border border-sand-50/20 text-sand-50 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-100 hover:text-soil-950"
               >
                 Contact us
               </Link>

@@ -36,7 +36,7 @@ export default function Contact() {
   }
 
   const inputClass =
-    'w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-gray-500 outline-none transition-colors focus:border-white/50';
+    'w-full rounded-lg border border-sand-50/20 bg-sand-50/5 px-4 py-3 text-sm text-sand-50 placeholder:text-sand-500 outline-none transition-colors focus:border-sand-50/50';
 
   return (
     <>
@@ -49,7 +49,7 @@ export default function Contact() {
           >
             Let&apos;s talk about your project
           </h1>
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+          <p className="text-sand-300 text-base md:text-lg leading-relaxed">
             Free quotes anywhere in Auckland. Message us on WhatsApp for the fastest reply, call
             during work hours, or use the form and we will get back to you.
           </p>
@@ -60,59 +60,59 @@ export default function Contact() {
         {/* Form */}
         <div className="lg:col-span-3">
           {status === 'sent' ? (
-            <div className="liquid-glass rounded-xl border border-white/20 px-8 py-12 text-center">
-              <CheckCircle2 size={40} className="mx-auto mb-4 text-white" aria-hidden="true" />
+            <div className="liquid-glass rounded-xl border border-sand-50/20 px-8 py-12 text-center">
+              <CheckCircle2 size={40} className="mx-auto mb-4 text-sand-50" aria-hidden="true" />
               <h2 className="text-2xl font-normal mb-2">Message sent</h2>
-              <p className="text-gray-300">
+              <p className="text-sand-300">
                 Thanks, we have your details and will be in touch shortly. Need us sooner?{' '}
-                <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">
+                <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="underline hover:text-sand-50">
                   WhatsApp us
                 </a>
                 .
               </p>
             </div>
           ) : (
-            <form onSubmit={onSubmit} className="liquid-glass rounded-xl border border-white/20 p-6 md:p-8" noValidate={false}>
+            <form onSubmit={onSubmit} className="liquid-glass rounded-xl border border-sand-50/20 p-6 md:p-8" noValidate={false}>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="name" className="mb-1.5 block text-sm text-gray-200">
+                  <label htmlFor="name" className="mb-1.5 block text-sm text-sand-200">
                     Name <span aria-hidden="true">*</span>
                   </label>
                   <input id="name" name="name" required autoComplete="name" className={inputClass} />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="mb-1.5 block text-sm text-gray-200">
+                  <label htmlFor="phone" className="mb-1.5 block text-sm text-sand-200">
                     Phone
                   </label>
                   <input id="phone" name="phone" type="tel" autoComplete="tel" className={inputClass} />
                 </div>
               </div>
               <div className="mt-4">
-                <label htmlFor="email" className="mb-1.5 block text-sm text-gray-200">
+                <label htmlFor="email" className="mb-1.5 block text-sm text-sand-200">
                   Email <span aria-hidden="true">*</span>
                 </label>
                 <input id="email" name="email" type="email" required autoComplete="email" className={inputClass} />
               </div>
               <div className="mt-4">
-                <label htmlFor="service" className="mb-1.5 block text-sm text-gray-200">
+                <label htmlFor="service" className="mb-1.5 block text-sm text-sand-200">
                   What do you need done?
                 </label>
                 <select id="service" name="service" defaultValue="" className={inputClass}>
-                  <option value="" className="bg-black">
+                  <option value="" className="bg-soil-900">
                     Choose a service (optional)
                   </option>
                   {SERVICES.map((s) => (
-                    <option key={s.slug} value={s.name} className="bg-black">
+                    <option key={s.slug} value={s.name} className="bg-soil-900">
                       {s.name}
                     </option>
                   ))}
-                  <option value="Something else" className="bg-black">
+                  <option value="Something else" className="bg-soil-900">
                     Something else
                   </option>
                 </select>
               </div>
               <div className="mt-4">
-                <label htmlFor="message" className="mb-1.5 block text-sm text-gray-200">
+                <label htmlFor="message" className="mb-1.5 block text-sm text-sand-200">
                   Tell us about the job <span aria-hidden="true">*</span>
                 </label>
                 <textarea
@@ -145,7 +145,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === 'sending'}
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 font-medium text-black transition-colors hover:bg-gray-100 disabled:opacity-60"
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-sand-100 px-8 py-3 font-medium text-soil-950 transition-colors hover:bg-sand-200 disabled:opacity-60"
               >
                 {status === 'sending' && <Loader2 size={16} className="animate-spin" aria-hidden="true" />}
                 {status === 'sending' ? 'Sending…' : 'Send message'}
@@ -160,29 +160,29 @@ export default function Contact() {
             href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="liquid-glass flex items-center gap-4 rounded-xl border border-white/20 p-6 transition-colors hover:border-white/40"
+            className="liquid-glass flex items-center gap-4 rounded-xl border border-sand-50/20 p-6 transition-colors hover:border-sand-50/40"
           >
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-black">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-soil-950">
               <MessageCircle size={22} aria-hidden="true" />
             </span>
             <span>
               <span className="block font-medium">WhatsApp us</span>
-              <span className="block text-sm text-gray-300">Fastest way to reach us: {SITE.phoneDisplay}</span>
+              <span className="block text-sm text-sand-300">Fastest way to reach us: {SITE.phoneDisplay}</span>
             </span>
           </a>
           <a
             href={SITE.phoneHref}
-            className="liquid-glass flex items-center gap-4 rounded-xl border border-white/20 p-6 transition-colors hover:border-white/40"
+            className="liquid-glass flex items-center gap-4 rounded-xl border border-sand-50/20 p-6 transition-colors hover:border-sand-50/40"
           >
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sand-50/10">
               <Phone size={20} aria-hidden="true" />
             </span>
             <span>
               <span className="block font-medium">Call {SITE.phoneDisplay}</span>
-              <span className="block text-sm text-gray-300">{SITE.hours}</span>
+              <span className="block text-sm text-sand-300">{SITE.hours}</span>
             </span>
           </a>
-          <div className="liquid-glass rounded-xl border border-white/20 p-6 space-y-3 text-sm text-gray-300">
+          <div className="liquid-glass rounded-xl border border-sand-50/20 p-6 space-y-3 text-sm text-sand-300">
             <p className="flex items-center gap-3">
               <MapPin size={16} className="shrink-0" aria-hidden="true" />
               Based in {SITE.address.suburb}, {SITE.address.city} {SITE.address.postcode}
@@ -191,7 +191,7 @@ export default function Contact() {
               <Clock size={16} className="shrink-0" aria-hidden="true" />
               {SITE.hours}
             </p>
-            <p className="pt-2 border-t border-white/10">
+            <p className="pt-2 border-t border-sand-50/10">
               Serving {SITE.areas.slice(0, -1).join(', ')} and {SITE.areas[SITE.areas.length - 1]}.
             </p>
           </div>

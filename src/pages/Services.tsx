@@ -18,7 +18,7 @@ export default function Services() {
           >
             Civil, earthworks and building services in Auckland
           </h1>
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+          <p className="text-sand-300 text-base md:text-lg leading-relaxed">
             Seven services, one contractor. Jai Civil covers the ground work, the structure and
             the wiring, so your project does not get lost between trades. Every service below
             has its own page with what is included and answers to common questions.
@@ -32,12 +32,12 @@ export default function Services() {
             <Reveal key={service.slug}>
               <Link
                 to={`/services/${service.slug}`}
-                className="liquid-glass group flex h-full flex-col rounded-xl border border-white/20 p-6 transition-colors hover:border-white/40"
+                className="liquid-glass group flex h-full flex-col rounded-xl border border-sand-50/20 p-6 transition-colors hover:border-sand-50/40"
               >
-                <ServiceIcon icon={service.icon} size={28} className="mb-4 text-gray-100" />
+                <ServiceIcon icon={service.icon} size={28} className="mb-4 text-clay-400" />
                 <h2 className="text-lg font-medium mb-2">{service.name}</h2>
-                <p className="text-sm leading-relaxed text-gray-300 mb-4">{service.short}</p>
-                <span className="mt-auto inline-flex items-center gap-2 text-sm text-gray-300 transition-colors group-hover:text-white">
+                <p className="text-sm leading-relaxed text-sand-300 mb-4">{service.short}</p>
+                <span className="mt-auto inline-flex items-center gap-2 text-sm text-sand-300 transition-colors group-hover:text-sand-50">
                   View service
                   <ArrowRight
                     size={15}
@@ -53,18 +53,18 @@ export default function Services() {
 
       <section className="px-6 md:px-12 lg:px-16 pt-20">
         <Reveal>
-          <div className="liquid-glass rounded-xl border border-white/20 px-8 py-10 md:px-12">
+          <div className="liquid-glass rounded-xl border border-sand-50/20 px-8 py-10 md:px-12">
             <h2 className="text-2xl md:text-3xl font-normal mb-3" style={{ letterSpacing: '-0.03em' }}>
               Not sure which service you need?
             </h2>
-            <p className="max-w-xl text-gray-300 leading-relaxed mb-6">
+            <p className="max-w-xl text-sand-300 leading-relaxed mb-6">
               Describe the job in a sentence or two and we will point you in the right direction,
               even if the answer is that you do not need us.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/contact"
-                className="bg-white text-black px-8 py-3 rounded-lg font-medium transition-colors hover:bg-gray-100"
+                className="bg-sand-100 text-soil-950 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-200"
               >
                 Get a Quote
               </Link>
@@ -72,7 +72,7 @@ export default function Services() {
                 href={whatsappLink('Hi Jai Civil, I have a project and I am not sure which service fits. Here is what I need done: ')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="liquid-glass border border-white/20 text-white px-8 py-3 rounded-lg font-medium transition-colors hover:bg-white hover:text-black"
+                className="liquid-glass border border-sand-50/20 text-sand-50 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-100 hover:text-soil-950"
               >
                 WhatsApp {SITE.phoneDisplay}
               </a>

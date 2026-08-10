@@ -25,7 +25,7 @@ export default function Header() {
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `transition-colors hover:text-gray-300 ${isActive ? 'text-white' : 'text-gray-100'}`
+                `transition-colors hover:text-sand-300 ${isActive ? 'text-sand-50' : 'text-sand-100'}`
               }
             >
               {link.label}
@@ -36,7 +36,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <Link
             to="/contact"
-            className="hidden sm:inline-block bg-white text-black px-6 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-gray-100"
+            className="hidden sm:inline-block bg-sand-100 text-soil-950 px-6 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-sand-200"
           >
             Get a Quote
           </Link>
@@ -45,7 +45,7 @@ export default function Header() {
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="md:hidden p-2 -mr-1 rounded-lg transition-colors hover:bg-white/10"
+            className="md:hidden p-2 -mr-1 rounded-lg transition-colors hover:bg-sand-50/10"
           >
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -60,8 +60,8 @@ export default function Header() {
               to={link.to}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `px-3 py-3 rounded-lg text-base transition-colors hover:bg-white/10 ${
-                  isActive ? 'text-white bg-white/5' : 'text-gray-100'
+                `px-3 py-3 rounded-lg text-base transition-colors hover:bg-sand-50/10 ${
+                  isActive ? 'text-sand-50 bg-sand-50/5' : 'text-sand-100'
                 }`
               }
             >
@@ -71,7 +71,7 @@ export default function Header() {
           <Link
             to="/contact"
             onClick={() => setOpen(false)}
-            className="mt-2 bg-white text-black px-6 py-3 rounded-lg text-sm font-medium text-center transition-colors hover:bg-gray-100"
+            className="mt-2 bg-sand-100 text-soil-950 px-6 py-3 rounded-lg text-sm font-medium text-center transition-colors hover:bg-sand-200"
           >
             Get a Quote
           </Link>

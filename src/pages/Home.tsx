@@ -46,7 +46,7 @@ export default function Home() {
                   initialDelay={200}
                 />
                 <FadeIn delay={800} duration={1000}>
-                  <p className="text-base md:text-lg text-gray-300 mb-5">
+                  <p className="text-base md:text-lg text-sand-300 mb-5">
                     Earthworks, roading and civil construction across Auckland, with licensed
                     building trades under one roof.
                   </p>
@@ -55,13 +55,13 @@ export default function Home() {
                   <div className="flex flex-wrap gap-4">
                     <Link
                       to="/contact"
-                      className="bg-white text-black px-8 py-3 rounded-lg font-medium transition-colors hover:bg-gray-100"
+                      className="bg-sand-100 text-soil-950 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-200"
                     >
                       Get a Quote
                     </Link>
                     <Link
                       to="/services"
-                      className="liquid-glass border border-white/20 text-white px-8 py-3 rounded-lg font-medium transition-colors hover:bg-white hover:text-black"
+                      className="liquid-glass border border-sand-50/20 text-sand-50 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-100 hover:text-soil-950"
                     >
                       Our Services
                     </Link>
@@ -70,7 +70,7 @@ export default function Home() {
               </div>
               <div className="mt-10 flex flex-col items-stretch gap-3 lg:mt-0 lg:items-end">
                 <FadeIn delay={1400} duration={1000} className="w-full lg:max-w-md">
-                  <p className="mb-3 hidden text-right text-sm font-light text-gray-300 lg:block">
+                  <p className="mb-3 hidden text-right text-sm font-light text-sand-300 lg:block">
                     Earthworks. Roading. Building.
                   </p>
                   <QuoteForm />
@@ -87,13 +87,13 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-normal mb-6" style={{ letterSpacing: '-0.03em' }}>
             One crew, from the first cut to the final fit off
           </h2>
-          <p className="text-gray-300 leading-relaxed mb-4">
+          <p className="text-sand-300 leading-relaxed mb-4">
             Jai Civil Limited is a Papakura based contractor that covers the whole chain: we cut
             and prepare the site, build the driveway, put up the structure under a Licensed
             Building Practitioner and wire it. No handover gaps between an earthworks company, a
             builder and an electrician, because we are all three.
           </p>
-          <p className="text-gray-300 leading-relaxed">
+          <p className="text-sand-300 leading-relaxed">
             We work across greater Auckland, from Papakura and Franklin to the North Shore,
             Rodney and Waiheke Island.
           </p>
@@ -108,7 +108,7 @@ export default function Home() {
           </h2>
           <Link
             to="/services"
-            className="group inline-flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-white"
+            className="group inline-flex items-center gap-2 text-sm text-sand-300 transition-colors hover:text-sand-50"
           >
             All services
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" aria-hidden="true" />
@@ -119,12 +119,12 @@ export default function Home() {
             <Reveal key={service.slug}>
               <Link
                 to={`/services/${service.slug}`}
-                className="liquid-glass group flex h-full flex-col rounded-xl border border-white/20 p-6 transition-colors hover:border-white/40"
+                className="liquid-glass group flex h-full flex-col rounded-xl border border-sand-50/20 p-6 transition-colors hover:border-sand-50/40"
               >
-                <ServiceIcon icon={service.icon} size={28} className="mb-4 text-gray-100" />
+                <ServiceIcon icon={service.icon} size={28} className="mb-4 text-clay-400" />
                 <h3 className="text-lg font-medium mb-2">{service.name}</h3>
-                <p className="text-sm leading-relaxed text-gray-300 mb-4">{service.short}</p>
-                <span className="mt-auto inline-flex items-center gap-2 text-sm text-gray-300 transition-colors group-hover:text-white">
+                <p className="text-sm leading-relaxed text-sand-300 mb-4">{service.short}</p>
+                <span className="mt-auto inline-flex items-center gap-2 text-sm text-sand-300 transition-colors group-hover:text-sand-50">
                   Learn more
                   <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" aria-hidden="true" />
                 </span>
@@ -140,14 +140,14 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-normal mb-6" style={{ letterSpacing: '-0.03em' }}>
             Areas we serve
           </h2>
-          <p className="max-w-2xl text-gray-300 leading-relaxed mb-8">
+          <p className="max-w-2xl text-sand-300 leading-relaxed mb-8">
             Based in {SITE.address.suburb}, working across the whole Auckland region.
           </p>
           <ul className="flex flex-wrap gap-3">
             {SITE.areas.map((area) => (
               <li
                 key={area}
-                className="liquid-glass rounded-lg border border-white/20 px-4 py-2 text-sm text-gray-100"
+                className="liquid-glass rounded-lg border border-sand-50/20 px-4 py-2 text-sm text-sand-100"
               >
                 {area}
               </li>
@@ -159,18 +159,18 @@ export default function Home() {
       {/* CTA */}
       <section className="px-6 md:px-12 lg:px-16 pt-24">
         <Reveal>
-          <div className="liquid-glass rounded-xl border border-white/20 px-8 py-12 md:px-12 md:py-16">
+          <div className="liquid-glass rounded-xl border border-sand-50/20 px-8 py-12 md:px-12 md:py-16">
             <h2 className="text-3xl md:text-4xl font-normal mb-4" style={{ letterSpacing: '-0.03em' }}>
               Tell us about your project
             </h2>
-            <p className="max-w-xl text-gray-300 leading-relaxed mb-8">
+            <p className="max-w-xl text-sand-300 leading-relaxed mb-8">
               Send a few details or photos and we will come back to you with an honest read on
               the job and a free quote.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/contact"
-                className="bg-white text-black px-8 py-3 rounded-lg font-medium transition-colors hover:bg-gray-100"
+                className="bg-sand-100 text-soil-950 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-200"
               >
                 Get a Quote
               </Link>
@@ -178,7 +178,7 @@ export default function Home() {
                 href={whatsappLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="liquid-glass border border-white/20 text-white px-8 py-3 rounded-lg font-medium transition-colors hover:bg-white hover:text-black"
+                className="liquid-glass border border-sand-50/20 text-sand-50 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-100 hover:text-soil-950"
               >
                 WhatsApp {SITE.phoneDisplay}
               </a>
