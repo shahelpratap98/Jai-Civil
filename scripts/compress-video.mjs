@@ -27,18 +27,27 @@ const poster = path.join(root, 'public', 'jai-hero-poster.jpg');
 
 const mb = (bytes) => (bytes / 1024 / 1024).toFixed(2);
 
+/**
+ * The half-speed feel is baked in here rather than via playbackRate in the
+ * browser: the 24fps master at playbackRate 0.5 showed only 12 unique frames
+ * a second, which read as lag. setpts=2*PTS doubles duration to 16s, then
+ * minterpolate synthesizes motion-interpolated frames back up to a true
+ * 30fps, so the slow motion is smooth. CRF 21 / 6M because the golden-hour
+ * dust turned to mush at CRF 25 / 4M full screen.
+ */
 execFileSync(
   ffmpeg,
   [
     '-y', '-loglevel', 'error',
     '-i', input,
-    '-vf', 'scale=1920:-2:flags=lanczos',
+    '-vf',
+    'scale=1920:-2:flags=lanczos,setpts=2.0*PTS,minterpolate=fps=30:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1',
     '-c:v', 'libx264',
     '-profile:v', 'high',
     '-preset', 'slow',
-    '-crf', '25',
-    '-maxrate', '4M',
-    '-bufsize', '8M',
+    '-crf', '21',
+    '-maxrate', '6M',
+    '-bufsize', '12M',
     '-pix_fmt', 'yuv420p',
     '-an',
     '-movflags', '+faststart',

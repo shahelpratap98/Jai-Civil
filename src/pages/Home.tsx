@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
@@ -11,32 +10,21 @@ import { SERVICES } from '../data/services';
 import { SITE, whatsappLink } from '../siteConfig';
 
 /**
- * Jai Civil hero loop: MiniMax H3, 8s, generated 2026-08-09 with the same
+ * Jai Civil hero loop: MiniMax H3, generated 2026-08-09 with the same
  * golden-hour excavator frame as start and end frame so the loop is seamless.
- * Self-hosted after `npm run compress:video` (the 2K ~18 Mbps master lagged;
- * this is the 1080p ~3.6 MB re-encode). Master kept in video-src/.
+ * Self-hosted, produced by `npm run compress:video` from the master in
+ * video-src/: 1080p, half speed baked in with motion-interpolated 30fps
+ * (browser playbackRate slow-mo showed 12 unique fps and read as lag).
  */
 const HERO_VIDEO = '/jai-hero.mp4';
 const HERO_POSTER = '/jai-hero-poster.jpg';
 
-/** Hero clip playback speed. The 8s loop reads calmer at half speed. */
-const HERO_PLAYBACK_RATE = 0.5;
-
 export default function Home() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  // Imperative, not just onLoadedMetadata: the <video> is prerendered, so
-  // loadedmetadata can fire before React hydrates and attaches listeners.
-  useEffect(() => {
-    if (videoRef.current) videoRef.current.playbackRate = HERO_PLAYBACK_RATE;
-  }, []);
-
   return (
     <>
       {/* Hero: raw video background, no overlay of any kind. */}
       <div className="relative flex flex-col min-h-dvh">
         <video
-          ref={videoRef}
           className="absolute inset-0 h-full w-full object-cover"
           src={HERO_VIDEO}
           poster={HERO_POSTER}
@@ -45,9 +33,6 @@ export default function Home() {
           muted
           playsInline
           aria-hidden="true"
-          onLoadedMetadata={(e) => {
-            e.currentTarget.playbackRate = HERO_PLAYBACK_RATE;
-          }}
         />
         <div className="relative z-10 flex flex-1 flex-col">
           <Header />
