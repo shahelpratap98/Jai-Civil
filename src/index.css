@@ -41,6 +41,16 @@ body {
   pointer-events: none;
 }
 
+/* When mobile power/data saving blocks autoplay, iOS overlays a play glyph
+   on the hero video. Hide it so the poster frame shows clean instead; the
+   touch handler in Home.tsx starts playback on first interaction. */
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+  opacity: 0;
+}
+
 /* Scroll reveal used on inner pages. Starts hidden, .is-visible animates in. */
 .reveal {
   opacity: 0;

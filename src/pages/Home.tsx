@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
@@ -20,11 +21,36 @@ const HERO_VIDEO = '/jai-hero.mp4';
 const HERO_POSTER = '/jai-hero-poster.jpg';
 
 export default function Home() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Mobile autoplay rescue. iOS Low Power Mode and Android Data Saver block
+  // autoplay and paint a play glyph over the poster. A muted video may still
+  // be started programmatically once the user touches the page, so retry on
+  // mount, on the first interaction, and when the tab becomes visible again.
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    const tryPlay = () => {
+      if (v.paused) v.play().catch(() => {});
+    };
+    tryPlay();
+    window.addEventListener('touchstart', tryPlay, { passive: true });
+    window.addEventListener('pointerdown', tryPlay);
+    document.addEventListener('visibilitychange', tryPlay);
+    return () => {
+      window.removeEventListener('touchstart', tryPlay);
+      window.removeEventListener('pointerdown', tryPlay);
+      document.removeEventListener('visibilitychange', tryPlay);
+    };
+  }, []);
+
   return (
     <>
       {/* Hero: raw video background, no overlay of any kind. */}
       <div className="relative flex flex-col min-h-dvh">
         <video
+          ref={videoRef}
           className="absolute inset-0 h-full w-full object-cover"
           src={HERO_VIDEO}
           poster={HERO_POSTER}
@@ -32,6 +58,7 @@ export default function Home() {
           loop
           muted
           playsInline
+          preload="auto"
           aria-hidden="true"
         />
         <div className="relative z-10 flex flex-1 flex-col">
