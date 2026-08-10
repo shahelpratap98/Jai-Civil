@@ -32,7 +32,7 @@ const PROJECT_TYPES = [
   },
   {
     title: 'Renovations and kitchens',
-    body: 'Interior renovations, kitchen replacements and structural alterations, with the electrical work coordinated in the same job.',
+    body: 'Interior renovations, kitchen replacements and structural alterations, with the sub trades coordinated in the same job.',
     service: 'renovations-kitchens',
   },
   {

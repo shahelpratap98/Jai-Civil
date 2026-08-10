@@ -19,9 +19,9 @@ export default function Services() {
             Civil, earthworks and building services in Auckland
           </h1>
           <p className="text-sand-300 text-base md:text-lg leading-relaxed">
-            Seven services, one contractor. Jai Civil covers the ground work, the structure and
-            the wiring, so your project does not get lost between trades. Every service below
-            has its own page with what is included and answers to common questions.
+            Eight services, one contractor. Jai Civil covers the ground work and the structure,
+            so your project does not get lost between trades. Every service below has its own
+            page with what is included and answers to common questions.
           </p>
         </div>
       </section>

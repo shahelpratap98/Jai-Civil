@@ -334,7 +334,7 @@ export const SERVICES: Service[] = [
       'Structural alterations under an LBP',
       'Bathroom and laundry renovations',
       'Decks, extensions and indoor outdoor flow',
-      'Electrical work coordinated in house',
+      'Sub trades coordinated within the one project',
     ],
     faqs: [
       {
@@ -348,9 +348,9 @@ export const SERVICES: Service[] = [
           'Yes. Structural alterations are restricted building work, and ours is carried out under a Licensed Building Practitioner with the correct consents.',
       },
       {
-        question: 'Who handles the electrical side of a renovation?',
+        question: 'Do you manage the other trades?',
         answer:
-          'We coordinate electrical work within the same project, so the wiring, switchboard and fit off are planned with the build instead of after it.',
+          'Yes. We coordinate the sub trades a renovation needs within the same project, so their work is planned with the build instead of after it.',
       },
     ],
   },
