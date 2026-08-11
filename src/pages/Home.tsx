@@ -110,21 +110,47 @@ export default function Home() {
 
       {/* One crew, start to finish */}
       <section className="px-6 md:px-12 lg:px-16 pt-24">
-        <Reveal className="max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-normal mb-6" style={{ letterSpacing: '-0.03em' }}>
-            One crew, from the first cut to the final fit off
-          </h2>
-          <p className="text-sand-300 leading-relaxed mb-4">
-            Jai Civil Limited is a Papakura based contractor that covers the whole chain: we cut
-            and prepare the site, build the driveway and put up the structure under a Licensed
-            Building Practitioner. No handover gaps between an earthworks company and a builder,
-            because we are both.
-          </p>
-          <p className="text-sand-300 leading-relaxed">
-            We work across greater Auckland, from Papakura and Franklin to the North Shore and
-            Waiheke Island, and travel New Zealand wide for the right projects.
-          </p>
-        </Reveal>
+        <div className="grid items-center gap-10 lg:grid-cols-2">
+          <Reveal>
+            <h2 className="text-3xl md:text-4xl font-normal mb-6" style={{ letterSpacing: '-0.03em' }}>
+              One crew, from the first cut to the final fit off
+            </h2>
+            <p className="text-sand-300 leading-relaxed mb-4">
+              Jai Civil Limited is a Papakura based contractor that covers the whole chain: we
+              cut and prepare the site, build the driveway and put up the structure under a
+              Licensed Building Practitioner. No handover gaps between an earthworks company and
+              a builder, because we are both.
+            </p>
+            <p className="text-sand-300 leading-relaxed mb-6">
+              We work across greater Auckland, from Papakura and Franklin to the North Shore and
+              Waiheke Island, and travel New Zealand wide for the right projects.
+            </p>
+            <Link
+              to="/projects"
+              className="group inline-flex items-center gap-2 text-sm text-sand-300 transition-colors hover:text-sand-50"
+            >
+              See our recent work
+              <ArrowRight
+                size={16}
+                className="transition-transform group-hover:translate-x-1"
+                aria-hidden="true"
+              />
+            </Link>
+          </Reveal>
+          <Reveal>
+            <figure className="overflow-hidden rounded-xl border border-sand-50/20">
+              <img
+                src="/projects/excavators-sunset.jpg"
+                alt="Two Jai Civil excavators parked on a cut building platform at sunset"
+                className="h-auto w-full"
+                loading="lazy"
+              />
+              <figcaption className="liquid-glass px-5 py-3 text-sm text-sand-200">
+                Machines parked up after a day cutting platforms.
+              </figcaption>
+            </figure>
+          </Reveal>
+        </div>
       </section>
 
       {/* Services grid */}
