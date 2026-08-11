@@ -194,36 +194,36 @@ export const SERVICES: Service[] = [
     ],
   },
   {
-    slug: 'tipper-truck-hire',
-    name: '6W Tipper Truck Hire',
+    slug: 'equipment-hire',
+    name: 'Equipment Hire',
     icon: 'Truck',
     image: '/projects/tipper-hire.jpg',
     imageAlt:
       'Jai Civil Isuzu 6 wheeler tipper truck with transporter trailer carrying a roller',
     short:
-      'Isuzu 6 wheeler tipper with driver for metal, topsoil and spoil cartage, with transporter trailer for machine moves.',
-    seoTitle: '6 Wheeler Tipper Truck Hire Auckland',
+      'Operated equipment hire, headlined by our Isuzu 6W tipper truck with transporter trailer for cartage and machine moves.',
+    seoTitle: 'Equipment & 6W Tipper Truck Hire Auckland',
     metaDescription:
-      '6 wheeler tipper truck hire in Auckland and New Zealand wide. Metal, topsoil and spoil cartage plus machine transport on the trailer, with an experienced driver. Free quotes.',
-    h1: '6 wheeler tipper truck hire',
+      'Equipment hire in Auckland and New Zealand wide. 6 wheeler tipper truck hire with driver for metal, topsoil and spoil cartage, machine transport on the trailer, and operated earthmoving gear by arrangement.',
+    h1: 'Equipment hire',
     intro: [
-      'Jai Civil runs an Isuzu 6 wheeler tipper with a transporter trailer, available for cartage and machine moves with an experienced driver. It is the same truck that services our own earthworks and roading jobs, so it comes with an operator who knows sites, not just roads.',
-      'Metal and aggregate deliveries, topsoil in, spoil and cleanfill out, and machines shifted on the trailer. Based in Papakura, working across Auckland and New Zealand wide.',
+      'Jai Civil hires out the same gear that services our own jobs, with operators who know sites, not just roads. The headline unit is our 6W tipper truck hire: an Isuzu 6 wheeler tipper with a transporter trailer, available with an experienced driver for cartage and machine moves.',
+      'The tipper covers metal and aggregate deliveries, topsoil in, spoil and cleanfill out, and machine shifts on the trailer. Our earthmoving machines are also available with operators by arrangement. Based in Papakura, working across Auckland and New Zealand wide.',
     ],
-    includesTitle: 'What the tipper covers',
+    includesTitle: 'What is available for hire',
     includes: [
-      'Metal and aggregate cartage to site',
-      'Topsoil deliveries',
+      '6W tipper truck hire with driver',
+      'Metal, aggregate and topsoil cartage to site',
       'Spoil and cleanfill removal',
-      'Machine transport on the trailer',
+      'Machine transport on the transporter trailer',
       'Site to site shifts for diggers and rollers',
-      'Cartage support for our own and other contractors’ jobs',
+      'Operated earthmoving gear by arrangement',
     ],
     faqs: [
       {
-        question: 'Does the truck come with a driver?',
+        question: 'Does the tipper come with a driver?',
         answer:
-          'Yes. The tipper is hired with an experienced driver, so your load or machine move is handled start to finish.',
+          'Yes. The 6W tipper is hired with an experienced driver, so your load or machine move is handled start to finish.',
       },
       {
         question: 'Can you move my digger or roller?',
@@ -231,9 +231,14 @@ export const SERVICES: Service[] = [
           'Yes. The transporter trailer handles small and mid size machines. Tell us the machine and where it needs to go and we will confirm it fits.',
       },
       {
-        question: 'How do I get a price for cartage?',
+        question: 'Do you dry hire machines without an operator?',
         answer:
-          'Call, WhatsApp or use the quote form with what needs moving, from where to where, and rough quantities. We come back with an hourly or per load rate.',
+          'Our gear goes out with our own operators. Tell us what the job needs and we will quote the machine and operator together.',
+      },
+      {
+        question: 'How do I get a price?',
+        answer:
+          'Call, WhatsApp or use the quote form with what needs moving or doing, where, and rough quantities. We come back with an hourly or per load rate.',
       },
     ],
   },

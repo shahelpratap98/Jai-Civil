@@ -3,7 +3,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/services/electrical", "destination": "/services", "permanent": true }
+    { "source": "/services/electrical", "destination": "/services", "permanent": true },
+    { "source": "/services/tipper-truck-hire", "destination": "/services/equipment-hire", "permanent": true }
   ],
   "headers": [
     {
