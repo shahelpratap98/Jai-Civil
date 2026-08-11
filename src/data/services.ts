@@ -14,7 +14,10 @@ export type Service = {
   slug: string;
   name: string;
   /** Icon name from lucide-react, resolved in components. */
-  icon: 'Mountain' | 'Route' | 'LandPlot' | 'Trees' | 'HardHat' | 'Hammer' | 'Layers' | 'Fence';
+  icon: 'Mountain' | 'Route' | 'LandPlot' | 'Trees' | 'HardHat' | 'Hammer' | 'Layers' | 'Fence' | 'Truck';
+  /** Optional photo shown on the service page (path under public/). */
+  image?: string;
+  imageAlt?: string;
   /** Card blurb on the index and home page. */
   short: string;
   seoTitle: string;
@@ -187,6 +190,50 @@ export const SERVICES: Service[] = [
       {
         question: 'Do you remove green waste and spoil?',
         answer: 'Yes. We cart away vegetation, spoil and old material as part of the job.',
+      },
+    ],
+  },
+  {
+    slug: 'tipper-truck-hire',
+    name: '6W Tipper Truck Hire',
+    icon: 'Truck',
+    image: '/projects/tipper-hire.jpg',
+    imageAlt:
+      'Jai Civil Isuzu 6 wheeler tipper truck with transporter trailer carrying a roller',
+    short:
+      'Isuzu 6 wheeler tipper with driver for metal, topsoil and spoil cartage, with transporter trailer for machine moves.',
+    seoTitle: '6 Wheeler Tipper Truck Hire Auckland',
+    metaDescription:
+      '6 wheeler tipper truck hire in Auckland and New Zealand wide. Metal, topsoil and spoil cartage plus machine transport on the trailer, with an experienced driver. Free quotes.',
+    h1: '6 wheeler tipper truck hire',
+    intro: [
+      'Jai Civil runs an Isuzu 6 wheeler tipper with a transporter trailer, available for cartage and machine moves with an experienced driver. It is the same truck that services our own earthworks and roading jobs, so it comes with an operator who knows sites, not just roads.',
+      'Metal and aggregate deliveries, topsoil in, spoil and cleanfill out, and machines shifted on the trailer. Based in Papakura, working across Auckland and New Zealand wide.',
+    ],
+    includesTitle: 'What the tipper covers',
+    includes: [
+      'Metal and aggregate cartage to site',
+      'Topsoil deliveries',
+      'Spoil and cleanfill removal',
+      'Machine transport on the trailer',
+      'Site to site shifts for diggers and rollers',
+      'Cartage support for our own and other contractors’ jobs',
+    ],
+    faqs: [
+      {
+        question: 'Does the truck come with a driver?',
+        answer:
+          'Yes. The tipper is hired with an experienced driver, so your load or machine move is handled start to finish.',
+      },
+      {
+        question: 'Can you move my digger or roller?',
+        answer:
+          'Yes. The transporter trailer handles small and mid size machines. Tell us the machine and where it needs to go and we will confirm it fits.',
+      },
+      {
+        question: 'How do I get a price for cartage?',
+        answer:
+          'Call, WhatsApp or use the quote form with what needs moving, from where to where, and rough quantities. We come back with an hourly or per load rate.',
       },
     ],
   },

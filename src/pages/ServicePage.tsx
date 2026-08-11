@@ -1,5 +1,5 @@
 import { Link, Navigate, useParams } from 'react-router-dom';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, FileDown } from 'lucide-react';
 import Header from '../components/Header';
 import Reveal from '../components/Reveal';
 import ServiceIcon from '../components/ServiceIcon';
@@ -44,6 +44,16 @@ export default function ServicePage() {
             </p>
           ))}
         </div>
+        {service.image && (
+          <figure className="mt-8 max-w-4xl overflow-hidden rounded-xl border border-sand-50/20">
+            <img
+              src={service.image}
+              alt={service.imageAlt ?? service.name}
+              className="h-auto w-full"
+              loading="lazy"
+            />
+          </figure>
+        )}
       </section>
 
       <section className="px-6 md:px-12 lg:px-16 pt-14">
@@ -88,6 +98,14 @@ export default function ServicePage() {
                 <p className="mt-3 text-sm leading-relaxed text-sand-300">{faq.answer}</p>
               </details>
             ))}
+            <a
+              href="/docs/jai-civil-safety-documentation.pdf"
+              download
+              className="mt-2 inline-flex items-center gap-2 rounded-lg border border-sand-50/20 liquid-glass px-6 py-3 text-sm font-medium transition-colors hover:bg-sand-100 hover:text-soil-950"
+            >
+              <FileDown size={16} aria-hidden="true" />
+              Download our safety documentation
+            </a>
           </div>
         </Reveal>
       </section>

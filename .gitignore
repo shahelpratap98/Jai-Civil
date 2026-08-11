@@ -45,3 +45,6 @@ next-env.d.ts
 # build outputs
 /dist
 /.ssr
+
+# full-size photo masters (compressed copies live in public/projects)
+/photo-src

@@ -1,7 +1,7 @@
-import { Mountain, Route, LandPlot, Trees, HardHat, Hammer, Layers, Fence } from 'lucide-react';
+import { Mountain, Route, LandPlot, Trees, HardHat, Hammer, Layers, Fence, Truck } from 'lucide-react';
 import type { Service } from '../data/services';
 
-const ICONS = { Mountain, Route, LandPlot, Trees, HardHat, Hammer, Layers, Fence } as const;
+const ICONS = { Mountain, Route, LandPlot, Trees, HardHat, Hammer, Layers, Fence, Truck } as const;
 
 export default function ServiceIcon({
   icon,

@@ -4,11 +4,62 @@ import Header from '../components/Header';
 import Reveal from '../components/Reveal';
 import { SITE, whatsappLink } from '../siteConfig';
 
-/**
- * Honest projects page: no invented client names, suburbs or photos.
- * These are the project types the company actually takes on; the photo
- * gallery slots in once real job photos are supplied.
- */
+/** Real job photos supplied by the owner 2026-08-11; captions describe what
+ *  is visible rather than claiming named clients or locations. */
+const GALLERY = [
+  {
+    src: '/projects/earthworks-cut-to-fill.jpg',
+    alt: 'SANY excavator loading an articulated dump truck with earth',
+    caption: 'Bulk earthworks: excavator loading the dump truck on a cut to fill job.',
+  },
+  {
+    src: '/projects/grader-platform.jpg',
+    alt: 'Caterpillar 140G grader on a shaped rural building platform',
+    caption: 'Grader shaping a rural platform ready for metal.',
+  },
+  {
+    src: '/projects/rural-road-metal.jpg',
+    alt: 'Freshly metalled gravel road running over a rural hill',
+    caption: 'Fresh metal courses laid and compacted on a rural road.',
+  },
+  {
+    src: '/projects/foundation-setout.jpg',
+    alt: 'Crew setting out strip footings with a laser level beside a commercial building',
+    caption: 'Setting out strip footings to the engineer’s levels.',
+  },
+  {
+    src: '/projects/reinforcing-steel.jpg',
+    alt: 'Reinforcing steel cage tied in a footing trench',
+    caption: 'Reinforcing steel tied, spaced and ready for inspection.',
+  },
+  {
+    src: '/projects/foundation-pour.jpg',
+    alt: 'Concrete mixer truck discharging into a reinforced footing while a worker screeds',
+    caption: 'Pour day: placing and screeding a reinforced footing.',
+  },
+  {
+    src: '/projects/foundation-finished.jpg',
+    alt: 'Finished concrete foundation wall and freshly floated footing',
+    caption: 'Formed, poured and floated: a finished retaining foundation.',
+  },
+  {
+    src: '/projects/roadside-drainage.jpg',
+    alt: 'Truck and excavator clearing a roadside drain on a gravel road',
+    caption: 'Truck and digger pairing up on roadside drainage.',
+  },
+  {
+    src: '/projects/retention-pond.jpg',
+    alt: 'Stormwater retention pond shaped and lined on a subdivision',
+    caption: 'Stormwater retention pond shaped, lined and rock armoured.',
+  },
+  {
+    src: '/projects/excavators-sunset.jpg',
+    alt: 'Two excavators parked on a cut building platform at sunset',
+    caption: 'Machines parked up after a day cutting platforms.',
+  },
+];
+
+/** Project types the company takes on, linking to the matching service. */
 const PROJECT_TYPES = [
   {
     title: 'Residential driveways and right of ways',
@@ -55,14 +106,39 @@ export default function Projects() {
             Our projects
           </h1>
           <p className="text-sand-300 text-base md:text-lg leading-relaxed">
-            The kind of work Jai Civil takes on across Auckland, from {SITE.address.suburb} out
-            to the wider region. We are compiling a photo gallery of recent jobs; in the
-            meantime, message us and we will send photos of work relevant to your project.
+            Real jobs, straight off our machines: earthworks, roading, foundations and
+            drainage from {SITE.address.suburb} out across Auckland and beyond.
           </p>
         </div>
       </section>
 
+      {/* Photo gallery */}
       <section className="px-6 md:px-12 lg:px-16 pt-14">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {GALLERY.map((photo) => (
+            <Reveal key={photo.src}>
+              <figure className="liquid-glass overflow-hidden rounded-xl border border-sand-50/20">
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  loading="lazy"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+                <figcaption className="px-5 py-4 text-sm leading-relaxed text-sand-200">
+                  {photo.caption}
+                </figcaption>
+              </figure>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 lg:px-16 pt-20">
+        <Reveal className="mb-10">
+          <h2 className="text-3xl md:text-4xl font-normal" style={{ letterSpacing: '-0.03em' }}>
+            The kind of work we take on
+          </h2>
+        </Reveal>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {PROJECT_TYPES.map((project) => (
             <Reveal key={project.title}>
