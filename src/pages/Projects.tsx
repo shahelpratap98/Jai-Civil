@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
 import Reveal from '../components/Reveal';
+import Reviews from '../components/Reviews';
 import { SITE, whatsappLink } from '../siteConfig';
 
 /** The original golden-hour excavator loop. Generated with the same still as
@@ -207,11 +208,13 @@ export default function Projects() {
         </div>
       </section>
 
+      <Reviews heading="What our customers say about the work" />
+
       <section className="px-6 md:px-12 lg:px-16 pt-20">
         <Reveal>
           <div className="liquid-glass rounded-xl border border-sand-50/20 px-8 py-10 md:px-12">
             <h2 className="text-2xl md:text-3xl font-normal mb-3" style={{ letterSpacing: '-0.03em' }}>
-              Want to see examples of our work?
+              Want to see more examples of our work?
             </h2>
             <p className="max-w-xl text-sand-300 leading-relaxed mb-6">
               WhatsApp us what you are planning and we will send through photos of similar jobs

@@ -2,6 +2,8 @@ import { Link, Navigate, useParams } from 'react-router-dom';
 import { ArrowRight, Check, FileDown } from 'lucide-react';
 import Header from '../components/Header';
 import Reveal from '../components/Reveal';
+import Reviews from '../components/Reviews';
+import ReviewStrip from '../components/ReviewStrip';
 import ServiceIcon from '../components/ServiceIcon';
 import { SERVICES, serviceBySlug } from '../data/services';
 import { SITE, whatsappLink } from '../siteConfig';
@@ -45,6 +47,7 @@ export default function ServicePage() {
               {paragraph}
             </p>
           ))}
+          <ReviewStrip className="mt-4" />
         </div>
         {service.image && (
           <figure className="mt-8 max-w-4xl overflow-hidden rounded-xl border border-sand-50/20">
@@ -111,6 +114,8 @@ export default function ServicePage() {
           </div>
         </Reveal>
       </section>
+
+      <Reviews heading="Trusted by our customers" limit={2} />
 
       <section className="px-6 md:px-12 lg:px-16 pt-16">
         <Reveal>

@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { Phone, MapPin, Clock, MessageCircle, Loader2, CheckCircle2 } from 'lucide-react';
 import Header from '../components/Header';
+import ReviewStrip from '../components/ReviewStrip';
 import { SERVICES } from '../data/services';
 import { SITE, whatsappLink } from '../siteConfig';
 
@@ -53,6 +54,7 @@ export default function Contact() {
             Free quotes anywhere in Auckland. Message us on WhatsApp for the fastest reply, call
             during work hours, or use the form and we will get back to you.
           </p>
+          <ReviewStrip className="mt-6" />
         </div>
       </section>
 

@@ -5,6 +5,8 @@ import Header from '../components/Header';
 import AnimatedHeading from '../components/AnimatedHeading';
 import FadeIn from '../components/FadeIn';
 import Reveal from '../components/Reveal';
+import Reviews from '../components/Reviews';
+import ReviewStrip from '../components/ReviewStrip';
 import ServiceIcon from '../components/ServiceIcon';
 import { SERVICES } from '../data/services';
 import { SITE, whatsappLink } from '../siteConfig';
@@ -94,13 +96,16 @@ export default function Home() {
                   </div>
                 </FadeIn>
               </div>
-              <div className="mt-10 flex items-end justify-start lg:mt-0 lg:justify-end">
+              <div className="mt-10 flex flex-col items-start gap-3 lg:mt-0 lg:items-end">
                 <FadeIn delay={1400} duration={1000}>
                   <div className="liquid-glass rounded-xl border border-sand-50/20 px-6 py-3">
                     <p className="text-lg font-light md:text-xl lg:text-2xl">
                       Earthworks. Roading. Building.
                     </p>
                   </div>
+                </FadeIn>
+                <FadeIn delay={1700} duration={1000}>
+                  <ReviewStrip />
                 </FadeIn>
               </div>
             </div>
@@ -214,6 +219,8 @@ export default function Home() {
           </ul>
         </Reveal>
       </section>
+
+      <Reviews />
 
       {/* CTA */}
       <section className="px-6 md:px-12 lg:px-16 pt-24">

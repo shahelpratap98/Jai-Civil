@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { Phone, MapPin, Clock, MessageCircle } from 'lucide-react';
 import { SITE, whatsappLink } from '../siteConfig';
 import { SERVICES } from '../data/services';
+import { REVIEW_SUMMARY } from '../data/reviews';
+import Stars from './Stars';
 
 /** Jai Civil has been trading since 2014, so the notice runs as a range. */
 const FOUNDED_YEAR = 2014;
@@ -18,6 +20,16 @@ export default function Footer() {
             Papakura based civil, earthworks and building contractor. Auckland and New Zealand
             wide.
           </p>
+          <a
+            href={REVIEW_SUMMARY.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-2 text-sm text-sand-300 transition-colors hover:text-clay-300"
+          >
+            <Stars rating={REVIEW_SUMMARY.rating} size={14} />
+            {REVIEW_SUMMARY.rating.toFixed(1)} from {REVIEW_SUMMARY.count}{' '}
+            {REVIEW_SUMMARY.source} reviews
+          </a>
           <div className="mt-5 space-y-2 text-sm text-sand-300">
             <a href={SITE.phoneHref} className="flex items-center gap-2 hover:text-clay-300 transition-colors">
               <Phone size={15} aria-hidden="true" /> {SITE.phoneDisplay}

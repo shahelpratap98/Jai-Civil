@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
 import Reveal from '../components/Reveal';
+import Reviews from '../components/Reviews';
+import ReviewStrip from '../components/ReviewStrip';
 import ServiceIcon from '../components/ServiceIcon';
 import { SERVICES } from '../data/services';
 import { whatsappLink, SITE } from '../siteConfig';
@@ -23,6 +25,7 @@ export default function Services() {
             so your project does not get lost between trades. Every service below has its own
             page with what is included and answers to common questions.
           </p>
+          <ReviewStrip className="mt-6" />
         </div>
       </section>
 
@@ -52,6 +55,8 @@ export default function Services() {
           ))}
         </div>
       </section>
+
+      <Reviews />
 
       <section className="px-6 md:px-12 lg:px-16 pt-20">
         <Reveal>
