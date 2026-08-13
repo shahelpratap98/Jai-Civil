@@ -62,7 +62,7 @@ export const SERVICES: Service[] = [
       {
         question: 'Which areas do you cover for earthworks?',
         answer:
-          'We are based in Papakura and work across greater Auckland, including Manukau, Franklin, the North Shore, Waitākere, Rodney and Waiheke Island, and we travel New Zealand wide for larger projects.',
+          'We are based in Papakura and work across greater Auckland, including Manukau, Franklin, the North Shore, Waitākere, Rodney and Waiheke Island, as well as the Waikato, and we travel New Zealand wide for larger projects.',
       },
       {
         question: 'Can you work to engineered drawings?',

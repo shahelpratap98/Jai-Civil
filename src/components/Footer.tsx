@@ -17,8 +17,8 @@ export default function Footer() {
         <div>
           <p className="text-2xl font-semibold tracking-tight mb-3">JAI CIVIL LIMITED</p>
           <p className="text-sand-300 text-sm leading-relaxed max-w-xs">
-            Papakura based civil, earthworks and building contractor. Auckland and New Zealand
-            wide.
+            Papakura based civil, earthworks and building contractor. Auckland, Waikato and New
+            Zealand wide.
           </p>
           <a
             href={REVIEW_SUMMARY.url}

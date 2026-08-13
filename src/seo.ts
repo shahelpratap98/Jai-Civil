@@ -17,14 +17,14 @@ export const ROUTES: RouteMeta[] = [
     path: '/',
     title: 'Jai Civil Limited: Earthworks & Civil Construction NZ',
     description:
-      'Papakura based civil and earthworks contractor, Auckland and New Zealand wide. Earthworks, roading, driveways, retaining walls, decks, LBP building and renovations. Free quotes.',
+      'Papakura based civil and earthworks contractor serving Auckland, the Waikato and New Zealand wide. Earthworks, roading, driveways, retaining walls, decks, LBP building and renovations. Free quotes.',
     priority: 1.0,
   },
   {
     path: '/services',
     title: `Civil, Earthworks & Building Services Auckland${suffix}`,
     description:
-      'Earthworks, roading and driveways, site preparation, retaining walls, landscaping, decks, LBP building and renovations. One Papakura based crew, Auckland and New Zealand wide.',
+      'Earthworks, roading and driveways, site preparation, retaining walls, landscaping, decks, LBP building and renovations. One Papakura based crew, Auckland, Waikato and New Zealand wide.',
     priority: 0.9,
   },
   {
@@ -74,6 +74,7 @@ export function schemasFor(path: string): object[] {
     },
     areaServed: [
       { '@type': 'City', name: 'Auckland', addressCountry: 'NZ' },
+      { '@type': 'AdministrativeArea', name: 'Waikato', addressCountry: 'NZ' },
       { '@type': 'Country', name: 'New Zealand' },
     ],
     openingHoursSpecification: [

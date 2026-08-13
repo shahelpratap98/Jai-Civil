@@ -75,7 +75,7 @@ export default function Home() {
                 />
                 <FadeIn delay={800} duration={1000}>
                   <p className="text-base md:text-lg text-sand-300 mb-5">
-                    Earthworks, roading and civil construction, Auckland and New Zealand wide,
+                    Earthworks, roading and civil construction across Auckland and the Waikato,
                     with licensed building trades under one roof.
                   </p>
                 </FadeIn>
@@ -128,7 +128,8 @@ export default function Home() {
             </p>
             <p className="text-sand-300 leading-relaxed mb-6">
               We work across greater Auckland, from Papakura and Franklin to the North Shore and
-              Waiheke Island, and travel New Zealand wide for the right projects.
+              Waiheke Island, down into the Waikato, and travel New Zealand wide for the right
+              projects.
             </p>
             <Link
               to="/projects"
@@ -201,8 +202,8 @@ export default function Home() {
             Areas we serve
           </h2>
           <p className="max-w-2xl text-sand-300 leading-relaxed mb-8">
-            Based in {SITE.address.suburb}, working across the whole Auckland region, and New
-            Zealand wide for larger projects.
+            Based in {SITE.address.suburb}, working across the whole Auckland region and the
+            Waikato, and New Zealand wide for larger projects.
           </p>
           <ul className="flex flex-wrap gap-3">
             {SITE.areas.map((area) => (

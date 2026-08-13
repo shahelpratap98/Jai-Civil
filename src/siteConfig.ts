@@ -22,7 +22,8 @@ export const SITE = {
     city: 'Auckland',
     postcode: '2110',
   },
-  /** Service areas listed on the company's Builderscrack profile. */
+  /** Service areas from the company's Builderscrack profile, plus Waikato,
+   *  which a Google reviewer names as an area they service. */
   areas: [
     'Papakura',
     'Manukau',
@@ -33,6 +34,7 @@ export const SITE = {
     'Rodney',
     'Waiheke Island',
     'Hauraki Gulf Islands',
+    'Waikato',
   ],
   hours: 'Mon to Fri, 8am to 5pm',
   hoursSchema: {

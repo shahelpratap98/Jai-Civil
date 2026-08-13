@@ -125,8 +125,9 @@ export default function Projects() {
 
   return (
     <>
-      {/* Video header: shorter than the home hero so the gallery stays close. */}
-      <div className="relative flex min-h-[70vh] flex-col">
+      {/* Video header: kept short so the crop lands on the digger itself and
+          the gallery starts near the fold. */}
+      <div className="relative flex min-h-[46vh] flex-col md:min-h-[52vh]">
         <video
           ref={videoRef}
           className="absolute inset-0 h-full w-full object-cover"
@@ -151,7 +152,8 @@ export default function Projects() {
               </h1>
               <p className="text-sand-200 text-base md:text-lg leading-relaxed">
                 Real jobs, straight off our machines: earthworks, roading, foundations and
-                drainage from {SITE.address.suburb} out across Auckland and beyond.
+                drainage from {SITE.address.suburb} out across Auckland, the Waikato and
+                beyond.
               </p>
             </div>
           </div>
