@@ -50,9 +50,10 @@ const GALLERY = [
     caption: 'Formed, poured and floated: a finished retaining foundation.',
   },
   {
-    src: '/projects/roadside-drainage.jpg',
-    alt: 'Truck and excavator clearing a roadside drain on a gravel road',
-    caption: 'Truck and digger pairing up on roadside drainage.',
+    src: '/projects/retaining-wall-poles.jpg',
+    alt: 'Excavator mounted post driver setting timber poles for a retaining wall, with a second excavator trimming the cut behind',
+    caption:
+      'Timber pole retaining wall going in: post driver on the arm, digger trimming the cut behind.',
   },
   {
     src: '/projects/retention-pond.jpg',
