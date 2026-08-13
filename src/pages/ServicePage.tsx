@@ -1,6 +1,7 @@
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { ArrowRight, Check, FileDown } from 'lucide-react';
 import Header from '../components/Header';
+import Photo from '../components/Photo';
 import Reveal from '../components/Reveal';
 import Reviews from '../components/Reviews';
 import ReviewStrip from '../components/ReviewStrip';
@@ -51,11 +52,11 @@ export default function ServicePage() {
         </div>
         {service.image && (
           <figure className="mt-8 max-w-4xl overflow-hidden rounded-xl border border-sand-50/20">
-            <img
+            <Photo
               src={service.image}
               alt={service.imageAlt ?? service.name}
+              sizes="(min-width: 1024px) 56rem, 92vw"
               className="h-auto w-full"
-              loading="lazy"
             />
           </figure>
         )}

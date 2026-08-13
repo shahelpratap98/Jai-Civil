@@ -21,15 +21,25 @@ body {
   outline-offset: 2px;
 }
 
+/**
+ * backdrop-filter is a per-element compositing cost the browser pays on every
+ * scroll frame. Over the flat soil background a 4px blur of a solid colour
+ * returns that same colour, so on a page with ~40 glass panels it was buying
+ * nothing and costing a great deal. Blur is now opt-in via .over-media, for
+ * the handful of panels that genuinely sit over the video.
+ */
 .liquid-glass {
   background: rgba(28, 19, 10, 0.45);
-  background-blend-mode: luminosity;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
   border: none;
   box-shadow: inset 0 1px 1px rgba(246, 240, 228, 0.1);
   position: relative;
   overflow: hidden;
+}
+
+.liquid-glass.over-media {
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 .liquid-glass::before {
   content: '';

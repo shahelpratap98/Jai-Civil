@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
+import Photo from '../components/Photo';
 import Reveal from '../components/Reveal';
 import Reviews from '../components/Reviews';
 import { SITE, whatsappLink } from '../siteConfig';
@@ -171,10 +172,10 @@ export default function Projects() {
           {GALLERY.map((photo) => (
             <Reveal key={photo.src}>
               <figure className="liquid-glass overflow-hidden rounded-xl border border-sand-50/20">
-                <img
+                <Photo
                   src={photo.src}
                   alt={photo.alt}
-                  loading="lazy"
+                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 92vw"
                   className="aspect-[4/3] w-full object-cover"
                 />
                 <figcaption className="px-5 py-4 text-sm leading-relaxed text-sand-200">

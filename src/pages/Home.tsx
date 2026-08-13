@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
 import AnimatedHeading from '../components/AnimatedHeading';
 import FadeIn from '../components/FadeIn';
+import Photo from '../components/Photo';
 import Reveal from '../components/Reveal';
 import Reviews from '../components/Reviews';
 import ReviewStrip from '../components/ReviewStrip';
@@ -102,14 +103,14 @@ export default function Home() {
               </div>
               <div className="mt-10 flex flex-col items-start gap-3 lg:mt-0 lg:items-end">
                 <FadeIn delay={1400} duration={1000}>
-                  <div className="liquid-glass rounded-xl border border-sand-50/20 px-6 py-3">
+                  <div className="liquid-glass over-media rounded-xl border border-sand-50/20 px-6 py-3">
                     <p className="text-lg font-light md:text-xl lg:text-2xl">
                       Earthworks. Roading. Building.
                     </p>
                   </div>
                 </FadeIn>
                 <FadeIn delay={1700} duration={1000}>
-                  <ReviewStrip />
+                  <ReviewStrip className="over-media" />
                 </FadeIn>
               </div>
             </div>
@@ -150,13 +151,13 @@ export default function Home() {
           </Reveal>
           <Reveal>
             <figure className="overflow-hidden rounded-xl border border-sand-50/20">
-              <img
+              <Photo
                 src="/projects/excavators-sunset.jpg"
                 alt="Two Jai Civil excavators parked on a cut building platform at sunset"
+                sizes="(min-width: 1024px) 45vw, 92vw"
                 className="h-auto w-full"
-                loading="lazy"
               />
-              <figcaption className="liquid-glass px-5 py-3 text-sm text-sand-200">
+              <figcaption className="liquid-glass over-media px-5 py-3 text-sm text-sand-200">
                 Machines parked up after a day cutting platforms.
               </figcaption>
             </figure>

@@ -38,12 +38,17 @@ const JOBS = [
     out: 'jai-hero.mp4',
     poster: 'jai-hero-poster.jpg',
     loop: 'crossfade',
+    // The home hero is the first thing anyone sees, so it keeps the budget.
+    quality: { crf: '20', maxrate: '10M', bufsize: '20M' },
   },
   {
     master: 'hero-earthworks.master.mp4',
     out: 'projects-hero.mp4',
     poster: 'projects-hero-poster.jpg',
     loop: 'native',
+    // Secondary page, and the crop only ever shows a band of it. Dust eats
+    // bitrate, so this one runs leaner.
+    quality: { crf: '24', maxrate: '5M', bufsize: '10M' },
   },
 ];
 
@@ -59,13 +64,13 @@ function durationOf(file) {
   return Number(match[1]) * 3600 + Number(match[2]) * 60 + Number(match[3]);
 }
 
-const ENCODE = [
+const encodeArgs = ({ crf, maxrate, bufsize }) => [
   '-c:v', 'libx264',
   '-profile:v', 'high',
   '-preset', 'slow',
-  '-crf', '20',
-  '-maxrate', '10M',
-  '-bufsize', '20M',
+  '-crf', crf,
+  '-maxrate', maxrate,
+  '-bufsize', bufsize,
   '-pix_fmt', 'yuv420p',
   '-an',
   '-movflags', '+faststart',
@@ -98,13 +103,13 @@ for (const job of JOBS) {
 
     execFileSync(
       ffmpeg,
-      ['-y', '-loglevel', 'error', '-i', input, '-filter_complex', filter, '-map', '[out]', ...ENCODE, output],
+      ['-y', '-loglevel', 'error', '-i', input, '-filter_complex', filter, '-map', '[out]', ...encodeArgs(job.quality), output],
       { stdio: 'inherit' }
     );
   } else {
     execFileSync(
       ffmpeg,
-      ['-y', '-loglevel', 'error', '-i', input, '-vf', 'scale=1920:-2:flags=lanczos', ...ENCODE, output],
+      ['-y', '-loglevel', 'error', '-i', input, '-vf', 'scale=1920:-2:flags=lanczos', ...encodeArgs(job.quality), output],
       { stdio: 'inherit' }
     );
   }
