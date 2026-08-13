@@ -3,7 +3,12 @@ import { Phone, MapPin, Clock, MessageCircle } from 'lucide-react';
 import { SITE, whatsappLink } from '../siteConfig';
 import { SERVICES } from '../data/services';
 
+/** Jai Civil has been trading since 2014, so the notice runs as a range. */
+const FOUNDED_YEAR = 2014;
+
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="border-t border-sand-50/10 mt-24">
       <div className="px-6 md:px-12 lg:px-16 py-14 grid gap-10 md:grid-cols-3">
@@ -59,7 +64,8 @@ export default function Footer() {
       </div>
       <div className="px-6 md:px-12 lg:px-16 py-6 border-t border-sand-50/10 flex flex-wrap items-center justify-between gap-3 text-xs text-sand-400">
         <p>
-          © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+          © {FOUNDED_YEAR}
+          {currentYear > FOUNDED_YEAR && `–${currentYear}`} {SITE.name}. All rights reserved.
         </p>
         <p>NZ Company 8175655</p>
       </div>
