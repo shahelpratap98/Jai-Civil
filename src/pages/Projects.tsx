@@ -140,17 +140,21 @@ export default function Projects() {
           preload="auto"
           aria-hidden="true"
         />
+        <div
+          className="hero-scrim pointer-events-none absolute inset-x-0 bottom-0 h-3/5"
+          aria-hidden="true"
+        />
         <div className="relative z-10 flex flex-1 flex-col">
           <Header />
           <div className="flex flex-1 flex-col justify-end px-6 pb-12 md:px-12 lg:px-16 lg:pb-16">
             <div className="max-w-3xl">
               <h1
-                className="text-4xl md:text-5xl lg:text-6xl font-normal mb-4"
+                className="hero-copy text-4xl md:text-5xl lg:text-6xl font-normal mb-4"
                 style={{ letterSpacing: '-0.04em' }}
               >
                 Our projects
               </h1>
-              <p className="text-sand-200 text-base md:text-lg leading-relaxed">
+              <p className="hero-copy text-sand-200 text-base md:text-lg leading-relaxed">
                 Real jobs, straight off our machines: earthworks, roading, foundations and
                 drainage from {SITE.address.suburb} out across Auckland, the Waikato and
                 beyond.

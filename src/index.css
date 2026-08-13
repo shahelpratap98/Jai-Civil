@@ -57,6 +57,24 @@ video::-webkit-media-controls-overlay-play-button {
   opacity: 0;
 }
 
+/* Hero legibility. The original brief asked for no overlay on the video, so
+   rather than dimming the whole frame there is a scrim confined to the bottom
+   area behind the copy, plus a soft shadow on the text itself. Together they
+   hold contrast when the truck's bright bodywork passes under the heading. */
+.hero-scrim {
+  background: linear-gradient(
+    to top,
+    rgba(23, 16, 8, 0.92) 0%,
+    rgba(23, 16, 8, 0.75) 25%,
+    rgba(23, 16, 8, 0.4) 55%,
+    rgba(23, 16, 8, 0) 100%
+  );
+}
+
+.hero-copy {
+  text-shadow: 0 2px 18px rgba(23, 16, 8, 0.65), 0 1px 3px rgba(23, 16, 8, 0.5);
+}
+
 /* Short accent rule above a section heading. Applied to the wrapper so the
    heading itself keeps its own spacing. */
 .accent-rule::before {

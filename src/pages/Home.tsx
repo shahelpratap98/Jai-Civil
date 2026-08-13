@@ -62,6 +62,10 @@ export default function Home() {
           preload="auto"
           aria-hidden="true"
         />
+        <div
+          className="hero-scrim pointer-events-none absolute inset-x-0 bottom-0 h-3/5"
+          aria-hidden="true"
+        />
         <div className="relative z-10 flex flex-1 flex-col">
           <Header />
           <div className="flex flex-1 flex-col justify-end px-6 pb-12 md:px-12 lg:px-16 lg:pb-16">
@@ -69,12 +73,12 @@ export default function Home() {
               <div>
                 <AnimatedHeading
                   text={'Shaping Auckland\nfrom the ground up.'}
-                  className="text-4xl font-normal md:text-5xl lg:text-6xl xl:text-7xl mb-4"
+                  className="hero-copy text-4xl font-normal md:text-5xl lg:text-6xl xl:text-7xl mb-4"
                   style={{ letterSpacing: '-0.04em' }}
                   initialDelay={200}
                 />
                 <FadeIn delay={800} duration={1000}>
-                  <p className="text-base md:text-lg text-sand-300 mb-5">
+                  <p className="hero-copy text-base md:text-lg text-sand-200 mb-5">
                     Earthworks, roading and civil construction across Auckland and the Waikato,
                     with licensed building trades under one roof.
                   </p>
