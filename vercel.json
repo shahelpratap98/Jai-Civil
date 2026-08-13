@@ -8,11 +8,7 @@
   ],
   "headers": [
     {
-      "source": "/jai-hero.mp4",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
-    },
-    {
-      "source": "/jai-hero-poster.jpg",
+      "source": "/(.*)\\.(mp4|jpg|png|svg|webp)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     }
   ]

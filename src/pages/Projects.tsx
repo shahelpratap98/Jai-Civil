@@ -1,8 +1,14 @@
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
 import Reveal from '../components/Reveal';
 import { SITE, whatsappLink } from '../siteConfig';
+
+/** The original golden-hour excavator loop. Generated with the same still as
+ *  its start and end frame, so it loops without a dissolve. */
+const PROJECTS_VIDEO = '/projects-hero.mp4';
+const PROJECTS_POSTER = '/projects-hero-poster.jpg';
 
 /** Real job photos supplied by the owner 2026-08-11; captions describe what
  *  is visible rather than claiming named clients or locations. */
@@ -94,26 +100,65 @@ const PROJECT_TYPES = [
 ];
 
 export default function Projects() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Same mobile autoplay rescue as the home hero: iOS Low Power Mode and
+  // Android Data Saver block autoplay, so retry once the visitor touches.
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    const tryPlay = () => {
+      if (v.paused) v.play().catch(() => {});
+    };
+    tryPlay();
+    window.addEventListener('touchstart', tryPlay, { passive: true });
+    window.addEventListener('pointerdown', tryPlay);
+    document.addEventListener('visibilitychange', tryPlay);
+    return () => {
+      window.removeEventListener('touchstart', tryPlay);
+      window.removeEventListener('pointerdown', tryPlay);
+      document.removeEventListener('visibilitychange', tryPlay);
+    };
+  }, []);
+
   return (
     <>
-      <Header />
-      <section className="px-6 md:px-12 lg:px-16 pt-16 md:pt-24">
-        <div className="max-w-3xl">
-          <h1
-            className="text-4xl md:text-5xl lg:text-6xl font-normal mb-6"
-            style={{ letterSpacing: '-0.04em' }}
-          >
-            Our projects
-          </h1>
-          <p className="text-sand-300 text-base md:text-lg leading-relaxed">
-            Real jobs, straight off our machines: earthworks, roading, foundations and
-            drainage from {SITE.address.suburb} out across Auckland and beyond.
-          </p>
+      {/* Video header: shorter than the home hero so the gallery stays close. */}
+      <div className="relative flex min-h-[70vh] flex-col">
+        <video
+          ref={videoRef}
+          className="absolute inset-0 h-full w-full object-cover"
+          src={PROJECTS_VIDEO}
+          poster={PROJECTS_POSTER}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+        />
+        <div className="relative z-10 flex flex-1 flex-col">
+          <Header />
+          <div className="flex flex-1 flex-col justify-end px-6 pb-12 md:px-12 lg:px-16 lg:pb-16">
+            <div className="max-w-3xl">
+              <h1
+                className="text-4xl md:text-5xl lg:text-6xl font-normal mb-4"
+                style={{ letterSpacing: '-0.04em' }}
+              >
+                Our projects
+              </h1>
+              <p className="text-sand-200 text-base md:text-lg leading-relaxed">
+                Real jobs, straight off our machines: earthworks, roading, foundations and
+                drainage from {SITE.address.suburb} out across Auckland and beyond.
+              </p>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
 
       {/* Photo gallery */}
-      <section className="px-6 md:px-12 lg:px-16 pt-14">
+      <section className="px-6 md:px-12 lg:px-16 pt-16">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {GALLERY.map((photo) => (
             <Reveal key={photo.src}>
