@@ -42,8 +42,13 @@ export default function Footer() {
             >
               <MessageCircle size={15} aria-hidden="true" /> WhatsApp us
             </a>
-            <p className="flex items-center gap-2">
-              <MapPin size={15} aria-hidden="true" /> {SITE.address.suburb}, {SITE.address.city}
+            <p className="flex items-start gap-2">
+              <MapPin size={15} className="mt-0.5 shrink-0" aria-hidden="true" />
+              <span>
+                {SITE.address.suburb}, {SITE.address.city}
+                <br />
+                Yard at {SITE.depot.suburb}, {SITE.depot.region}
+              </span>
             </p>
             <p className="flex items-center gap-2">
               <Clock size={15} aria-hidden="true" /> {SITE.hours}
@@ -66,12 +71,13 @@ export default function Footer() {
 
         <div>
           <p className="text-sm font-medium mb-4 text-clay-400">Areas we serve</p>
-          <ul className="space-y-2 text-sm text-sand-300">
-            {SITE.areas.map((area) => (
-              <li key={area}>{area}</li>
-            ))}
-            <li className="pt-1 text-sand-100">+ New Zealand wide</li>
-          </ul>
+          {SITE.areaGroups.map((group) => (
+            <div key={group.region} className="mb-4">
+              <p className="text-xs uppercase tracking-wider text-sand-400 mb-2">{group.region}</p>
+              <p className="text-sm leading-relaxed text-sand-300">{group.areas.join(', ')}</p>
+            </div>
+          ))}
+          <p className="text-sm text-sand-100">+ New Zealand wide for larger projects</p>
         </div>
       </div>
       <div className="px-6 md:px-12 lg:px-16 py-6 border-t border-sand-50/10 flex flex-wrap items-center justify-between gap-3 text-xs text-sand-400">

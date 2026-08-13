@@ -17,14 +17,14 @@ export const ROUTES: RouteMeta[] = [
     path: '/',
     title: 'Jai Civil Limited: Earthworks & Civil Construction NZ',
     description:
-      'Papakura based civil and earthworks contractor serving Auckland, the Waikato and New Zealand wide. Earthworks, roading, driveways, retaining walls, decks, LBP building and renovations. Free quotes.',
+      'Civil and earthworks contractor with yards in Papakura and Huntly, serving Auckland, the greater Waikato and New Zealand wide. Earthworks, roading, steelfixing, erosion protection, tree felling and building. Free quotes.',
     priority: 1.0,
   },
   {
     path: '/services',
     title: `Civil, Earthworks & Building Services Auckland${suffix}`,
     description:
-      'Earthworks, roading and driveways, site preparation, retaining walls, landscaping, decks, LBP building and renovations. One Papakura based crew, Auckland, Waikato and New Zealand wide.',
+      'Earthworks, roading, site preparation, steelfixing, sea and river protection, tree felling, retaining walls, landscaping, decks and LBP building. One crew, Auckland, Waikato and New Zealand wide.',
     priority: 0.9,
   },
   {
@@ -77,6 +77,18 @@ export function schemasFor(path: string): object[] {
       { '@type': 'AdministrativeArea', name: 'Waikato', addressCountry: 'NZ' },
       { '@type': 'Country', name: 'New Zealand' },
     ],
+    // The Huntly yard has no supplied street address, so it is declared as a
+    // served place rather than a mapped second location.
+    location: {
+      '@type': 'Place',
+      name: `${SITE.depot.suburb} yard`,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: SITE.depot.suburb,
+        addressRegion: SITE.depot.region,
+        addressCountry: 'NZ',
+      },
+    },
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

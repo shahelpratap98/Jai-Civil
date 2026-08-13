@@ -131,9 +131,10 @@ export default function Home() {
               a builder, because we are both.
             </p>
             <p className="text-sand-300 leading-relaxed mb-6">
-              We work across greater Auckland, from Papakura and Franklin to the North Shore and
-              Waiheke Island, down into the Waikato, and travel New Zealand wide for the right
-              projects.
+              We run two yards, {SITE.address.suburb} in South Auckland and{' '}
+              {SITE.depot.suburb} in the {SITE.depot.region}, so we cover greater Auckland and
+              the greater {SITE.depot.region} as home turf, and travel New Zealand wide for the
+              right projects.
             </p>
             <Link
               to="/projects"
@@ -205,23 +206,31 @@ export default function Home() {
           <h2 className="accent-rule text-3xl md:text-4xl font-normal mb-6" style={{ letterSpacing: '-0.03em' }}>
             Areas we serve
           </h2>
-          <p className="max-w-2xl text-sand-300 leading-relaxed mb-8">
-            Based in {SITE.address.suburb}, working across the whole Auckland region and the
-            Waikato, and New Zealand wide for larger projects.
+          <p className="max-w-2xl text-sand-300 leading-relaxed mb-10">
+            Two bases: our {SITE.address.suburb} yard covers the whole Auckland region, and our{' '}
+            {SITE.depot.suburb} yard covers the greater {SITE.depot.region}. We travel New Zealand
+            wide for larger projects.
           </p>
-          <ul className="flex flex-wrap gap-3">
-            {SITE.areas.map((area) => (
-              <li
-                key={area}
-                className="liquid-glass rounded-lg border border-sand-50/20 px-4 py-2 text-sm text-sand-100"
-              >
-                {area}
-              </li>
+          <div className="space-y-7">
+            {SITE.areaGroups.map((group) => (
+              <div key={group.region}>
+                <p className="mb-3 text-sm font-medium uppercase tracking-wider text-clay-400">
+                  {group.region}
+                </p>
+                <ul className="flex flex-wrap gap-3">
+                  {group.areas.map((area) => (
+                    <li
+                      key={area}
+                      className="liquid-glass rounded-lg border border-sand-50/20 px-4 py-2 text-sm text-sand-100"
+                    >
+                      {area}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-            <li className="liquid-glass rounded-lg border border-clay-400/40 px-4 py-2 text-sm text-clay-400">
-              + New Zealand wide
-            </li>
-          </ul>
+            <p className="text-sm text-clay-400">+ New Zealand wide for larger projects</p>
+          </div>
         </Reveal>
       </section>
 

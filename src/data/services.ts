@@ -14,7 +14,19 @@ export type Service = {
   slug: string;
   name: string;
   /** Icon name from lucide-react, resolved in components. */
-  icon: 'Mountain' | 'Route' | 'LandPlot' | 'Trees' | 'HardHat' | 'Hammer' | 'Layers' | 'Fence' | 'Truck';
+  icon:
+    | 'Mountain'
+    | 'Route'
+    | 'LandPlot'
+    | 'Trees'
+    | 'HardHat'
+    | 'Hammer'
+    | 'Layers'
+    | 'Fence'
+    | 'Truck'
+    | 'Construction'
+    | 'Waves'
+    | 'TreePine';
   /** Optional photo shown on the service page (path under public/). */
   image?: string;
   imageAlt?: string;
@@ -239,6 +251,133 @@ export const SERVICES: Service[] = [
         question: 'How do I get a price?',
         answer:
           'Call, WhatsApp or use the quote form with what needs moving or doing, where, and rough quantities. We come back with an hourly or per load rate.',
+      },
+    ],
+  },
+  {
+    slug: 'steelfixing',
+    name: 'Steelfixing',
+    icon: 'Construction',
+    short:
+      'Reinforcing steel cut, bent, tied and spaced to the engineer’s drawings, ready to pass inspection before the pour.',
+    seoTitle: 'Steelfixing & Reinforcing Auckland, Waikato',
+    metaDescription:
+      'Steelfixing and reinforcing steel across Auckland and the Waikato. Footings, slabs, walls and structures tied to engineered drawings and ready for inspection. Free quotes.',
+    h1: 'Steelfixing and reinforcing',
+    intro: [
+      'Concrete is only as strong as the steel inside it. Jai Civil fixes reinforcing for footings, slabs, retaining walls and structures, tied and spaced to the engineer’s drawings so it passes inspection first time.',
+      'Because we also do the excavation and the pour, the steel goes in between our own trades rather than waiting on a separate crew. That is usually where programmes slip.',
+    ],
+    image: '/projects/reinforcing-steel.jpg',
+    imageAlt: 'Reinforcing steel cage tied and spaced in a footing trench',
+    includesTitle: 'Steelfixing work we do',
+    includes: [
+      'Footing and foundation cages',
+      'Slab mesh and starter bars',
+      'Retaining and structural wall steel',
+      'Cutting, bending and tying on site',
+      'Cover spacers and correct placement for inspection',
+      'Coordination with the pour so steel is not left standing',
+    ],
+    faqs: [
+      {
+        question: 'Do you work to engineered drawings?',
+        answer:
+          'Yes. Reinforcing is fixed to the structural drawings and schedule, with the cover and spacing the engineer specifies, ready for inspection before any concrete is placed.',
+      },
+      {
+        question: 'Can you supply the steel as well as fix it?',
+        answer:
+          'We can arrange supply and fixing together, or fix steel you or your supplier have already delivered to site. Tell us which suits and we will price it that way.',
+      },
+      {
+        question: 'Do you take on steelfixing on its own?',
+        answer:
+          'Yes. Steelfixing is often part of a larger job for us, but we take it on as a standalone package for builders and main contractors too.',
+      },
+    ],
+  },
+  {
+    slug: 'erosion-protection',
+    name: 'Sea & River Protection',
+    icon: 'Waves',
+    short:
+      'Erosion control on coastal and river edges: rock armour, revetments, batter protection and bank stabilisation.',
+    seoTitle: 'Erosion Control, Sea & River Protection NZ',
+    metaDescription:
+      'Coastal and river erosion protection across Auckland, the Waikato and New Zealand wide. Rock armour, revetments, bank stabilisation and scour protection by a civil contractor.',
+    h1: 'Sea and river protection',
+    intro: [
+      'Water takes ground away quietly, then all at once. Jai Civil builds the works that stop it: rock armour and revetments on coastal edges, bank stabilisation and scour protection along rivers and streams, and batter protection wherever water is cutting into a site.',
+      'This is machine and ground work at its most demanding, on tidal and river edges with tight windows and consent conditions to meet. It is exactly the kind of civil work our plant and crew are set up for, anywhere in Auckland, the Waikato or further afield.',
+    ],
+    image: '/projects/retention-pond.jpg',
+    imageAlt: 'Shaped and rock armoured stormwater basin on a subdivision',
+    includesTitle: 'Erosion and protection work',
+    includes: [
+      'Rock armour and rip rap placement',
+      'Revetments and coastal edge protection',
+      'River and stream bank stabilisation',
+      'Scour protection around structures and outlets',
+      'Stormwater basins, swales and outlet protection',
+      'Silt and sediment control during the works',
+    ],
+    faqs: [
+      {
+        question: 'Do coastal and river works need consent?',
+        answer:
+          'Usually yes. Works in the coastal marine area or a river bed generally need resource consent from the regional council. We build to the consented design and its conditions, and work in with your engineer or consultant.',
+      },
+      {
+        question: 'Can you fix a bank that is already washing out?',
+        answer:
+          'Yes. We assess what the water is actually doing, then quote the repair: reshaping the batter, armouring the toe, and protecting the outlet or structure causing the scour.',
+      },
+      {
+        question: 'How far do you travel for this work?',
+        answer:
+          'From Papakura and our Huntly yard we cover Auckland and the greater Waikato as standard, and travel New Zealand wide for larger protection projects.',
+      },
+    ],
+  },
+  {
+    slug: 'tree-felling-clearing',
+    name: 'Tree Felling & Clearing',
+    icon: 'TreePine',
+    short:
+      'Tree felling, removals and vegetation clearing with a qualified arborist on the team and machines to clear the site after.',
+    seoTitle: 'Tree Felling, Arborist & Clearing Auckland',
+    metaDescription:
+      'Tree felling, removals and vegetation clearing across Auckland and the Waikato. Qualified arborist plus the machines to mulch, cart away and leave the site clear. Free quotes.',
+    h1: 'Tree felling and site clearing',
+    intro: [
+      'Most tree jobs end with a section full of timber and a customer chasing a second contractor to shift it. Jai Civil has a qualified arborist on the team and the machines to clear up afterwards, so the tree comes down and the site goes away clean in one job.',
+      'We take on single tree removals through to full section and lot clearing ahead of earthworks, across Auckland and the greater Waikato.',
+    ],
+    includesTitle: 'Tree and clearing work',
+    includes: [
+      'Tree felling and dismantling by a qualified arborist',
+      'Stump grinding and root removal',
+      'Vegetation, scrub and hedge clearing',
+      'Full section and lot clearing before earthworks',
+      'Mulching, chipping and green waste removal',
+      'Access tracks cut in for difficult sites',
+    ],
+    faqs: [
+      {
+        question: 'Do you have a qualified arborist?',
+        answer:
+          'Yes. Tree work is carried out by a qualified arborist on our team, backed by our own machines and trucks for the clearing and cartage.',
+      },
+      {
+        question: 'Do I need council approval to remove a tree?',
+        answer:
+          'Some trees are protected, whether scheduled individually, covered by a notable tree listing, or protected in a significant ecological area. We tell you when a job looks like it needs council approval before anything starts.',
+      },
+      {
+        question: 'What happens to the timber and green waste?',
+        answer:
+          'We chip, mulch or cart it away as part of the job. You are not left with a section full of logs to deal with.',
       },
     ],
   },

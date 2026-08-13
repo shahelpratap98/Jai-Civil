@@ -22,19 +22,43 @@ export const SITE = {
     city: 'Auckland',
     postcode: '2110',
   },
-  /** Service areas from the company's Builderscrack profile, plus Waikato,
-   *  which a Google reviewer names as an area they service. */
-  areas: [
-    'Papakura',
-    'Manukau',
-    'Franklin',
-    'Auckland Central',
-    'North Shore',
-    'Waitākere',
-    'Rodney',
-    'Waiheke Island',
-    'Hauraki Gulf Islands',
-    'Waikato',
+  /** Second base, confirmed by the owner 2026-08-13. No street address has
+   *  been supplied, so it is described as a yard rather than mapped. */
+  depot: {
+    suburb: 'Huntly',
+    region: 'Waikato',
+  },
+  /** Grouped by region because the company now works from two bases. Auckland
+   *  areas come from the Builderscrack profile; the Waikato list was confirmed
+   *  by the owner along with the Huntly yard. */
+  areaGroups: [
+    {
+      region: 'Auckland',
+      areas: [
+        'Papakura',
+        'Manukau',
+        'Franklin',
+        'Auckland Central',
+        'North Shore',
+        'Waitākere',
+        'Rodney',
+        'Waiheke Island',
+        'Hauraki Gulf Islands',
+      ],
+    },
+    {
+      region: 'Waikato',
+      areas: [
+        'Huntly',
+        'Ngāruawāhia',
+        'Hamilton',
+        'Te Kauwhata',
+        'Pōkeno',
+        'Tuakau',
+        'Raglan',
+        'Morrinsville',
+      ],
+    },
   ],
   hours: 'Mon to Fri, 8am to 5pm',
   hoursSchema: {
@@ -44,6 +68,9 @@ export const SITE = {
   },
   ogImage: '/og-image.jpg',
 } as const;
+
+/** Flat list of every area served, for copy that reads them out in a line. */
+export const ALL_AREAS: string[] = SITE.areaGroups.flatMap((group) => [...group.areas]);
 
 export function whatsappLink(message?: string): string {
   return `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(

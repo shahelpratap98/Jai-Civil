@@ -3,7 +3,7 @@ import { Phone, MapPin, Clock, MessageCircle, Loader2, CheckCircle2 } from 'luci
 import Header from '../components/Header';
 import ReviewStrip from '../components/ReviewStrip';
 import { SERVICES } from '../data/services';
-import { SITE, whatsappLink } from '../siteConfig';
+import { ALL_AREAS, SITE, whatsappLink } from '../siteConfig';
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';
 
@@ -185,16 +185,20 @@ export default function Contact() {
             </span>
           </a>
           <div className="liquid-glass rounded-xl border border-sand-50/20 p-6 space-y-3 text-sm text-sand-300">
-            <p className="flex items-center gap-3">
-              <MapPin size={16} className="shrink-0" aria-hidden="true" />
-              Based in {SITE.address.suburb}, {SITE.address.city} {SITE.address.postcode}
+            <p className="flex items-start gap-3">
+              <MapPin size={16} className="mt-0.5 shrink-0" aria-hidden="true" />
+              <span>
+                Based in {SITE.address.suburb}, {SITE.address.city} {SITE.address.postcode}
+                <br />
+                Yard at {SITE.depot.suburb}, {SITE.depot.region}
+              </span>
             </p>
             <p className="flex items-center gap-3">
               <Clock size={16} className="shrink-0" aria-hidden="true" />
               {SITE.hours}
             </p>
             <p className="pt-2 border-t border-sand-50/10">
-              Serving {SITE.areas.join(', ')}, and New Zealand wide for larger projects.
+              Serving {ALL_AREAS.join(', ')}, and New Zealand wide for larger projects.
             </p>
           </div>
         </div>
