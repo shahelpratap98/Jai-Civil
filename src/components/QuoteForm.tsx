@@ -95,7 +95,7 @@ export default function QuoteForm() {
   const label = 'mb-1.5 block text-[11px] font-medium tracking-[0.14em] text-sand-200';
   // 16px, not smaller: iOS auto-zooms the page when a focused input is under 16px.
   const field =
-    'w-full rounded-lg border border-sand-50/20 bg-sand-50/10 px-4 py-2.5 text-[16px] text-sand-50 placeholder:text-sand-500 min-h-[44px] outline-none transition-colors focus:border-sand-50/60';
+    'w-full rounded-lg border border-sand-50/20 bg-sand-50/10 px-4 py-2.5 text-[16px] text-sand-50 placeholder:text-sand-500 min-h-[44px] outline-none transition-colors focus:border-clay-400';
   const errorClass = 'mt-1.5 text-[12px] text-red-300';
 
   if (status === 'sent') {
@@ -115,7 +115,7 @@ export default function QuoteForm() {
             href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-2 hover:text-sand-50"
+            className="underline underline-offset-2 hover:text-clay-300"
           >
             WhatsApp us
           </a>
@@ -284,7 +284,7 @@ export default function QuoteForm() {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="mt-4 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-sand-100 px-8 py-3 font-medium text-soil-950 transition-colors hover:bg-sand-200 disabled:opacity-60"
+        className="mt-4 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-clay-500 px-8 py-3 font-medium text-soil-950 transition-colors hover:bg-clay-400 disabled:opacity-60"
       >
         {status === 'sending' ? (
           <>

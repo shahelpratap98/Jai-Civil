@@ -180,7 +180,7 @@ export default function Projects() {
 
       <section className="px-6 md:px-12 lg:px-16 pt-20">
         <Reveal className="mb-10">
-          <h2 className="text-3xl md:text-4xl font-normal" style={{ letterSpacing: '-0.03em' }}>
+          <h2 className="accent-rule text-3xl md:text-4xl font-normal" style={{ letterSpacing: '-0.03em' }}>
             The kind of work we take on
           </h2>
         </Reveal>
@@ -192,7 +192,7 @@ export default function Projects() {
                 <p className="text-sm leading-relaxed text-sand-300 mb-5">{project.body}</p>
                 <Link
                   to={`/services/${project.service}`}
-                  className="group mt-auto inline-flex items-center gap-2 text-sm text-sand-300 transition-colors hover:text-sand-50"
+                  className="group mt-auto inline-flex items-center gap-2 text-sm text-sand-300 transition-colors hover:text-clay-300"
                 >
                   About this service
                   <ArrowRight
@@ -222,13 +222,13 @@ export default function Projects() {
                 href={whatsappLink('Hi Jai Civil, could you send me some examples of your work? My project: ')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-sand-100 text-soil-950 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-200"
+                className="bg-clay-500 text-soil-950 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-clay-400"
               >
                 WhatsApp {SITE.phoneDisplay}
               </a>
               <Link
                 to="/contact"
-                className="liquid-glass border border-sand-50/20 text-sand-50 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-100 hover:text-soil-950"
+                className="liquid-glass border border-sand-50/20 text-sand-50 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-clay-500 hover:text-soil-950"
               >
                 Contact us
               </Link>

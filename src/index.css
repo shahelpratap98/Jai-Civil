@@ -11,8 +11,14 @@ body {
 }
 
 ::selection {
-  background: rgba(237, 228, 211, 0.95);
+  background: #F26A0F;
   color: #171008;
+}
+
+/* One visible focus style everywhere, in the accent so it reads as intent. */
+:focus-visible {
+  outline: 2px solid #FF8A2B;
+  outline-offset: 2px;
 }
 
 .liquid-glass {
@@ -49,6 +55,18 @@ video::-webkit-media-controls-overlay-play-button {
   display: none !important;
   -webkit-appearance: none;
   opacity: 0;
+}
+
+/* Short accent rule above a section heading. Applied to the wrapper so the
+   heading itself keeps its own spacing. */
+.accent-rule::before {
+  content: '';
+  display: block;
+  width: 44px;
+  height: 3px;
+  border-radius: 999px;
+  background: #F26A0F;
+  margin-bottom: 1.25rem;
 }
 
 /* Scroll reveal used on inner pages. Starts hidden, .is-visible animates in. */

@@ -20,18 +20,20 @@ export default function ServicePage() {
 
       <section className="px-6 md:px-12 lg:px-16 pt-16 md:pt-24">
         <nav aria-label="Breadcrumb" className="mb-6 text-sm text-sand-400">
-          <Link to="/" className="transition-colors hover:text-sand-50">
+          <Link to="/" className="transition-colors hover:text-clay-300">
             Home
           </Link>
           <span aria-hidden="true"> / </span>
-          <Link to="/services" className="transition-colors hover:text-sand-50">
+          <Link to="/services" className="transition-colors hover:text-clay-300">
             Services
           </Link>
           <span aria-hidden="true"> / </span>
           <span className="text-sand-200">{service.name}</span>
         </nav>
         <div className="max-w-3xl">
-          <ServiceIcon icon={service.icon} size={36} className="mb-6 text-clay-400" />
+          <span className="mb-6 inline-flex w-fit rounded-xl border border-clay-500/25 bg-clay-500/10 p-3">
+            <ServiceIcon icon={service.icon} size={32} className="text-clay-400" />
+          </span>
           <h1
             className="text-4xl md:text-5xl lg:text-6xl font-normal mb-6"
             style={{ letterSpacing: '-0.04em' }}
@@ -58,7 +60,7 @@ export default function ServicePage() {
 
       <section className="px-6 md:px-12 lg:px-16 pt-14">
         <Reveal>
-          <h2 className="text-2xl md:text-3xl font-normal mb-8" style={{ letterSpacing: '-0.03em' }}>
+          <h2 className="accent-rule text-2xl md:text-3xl font-normal mb-8" style={{ letterSpacing: '-0.03em' }}>
             {service.includesTitle}
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2 max-w-4xl">
@@ -77,7 +79,7 @@ export default function ServicePage() {
 
       <section className="px-6 md:px-12 lg:px-16 pt-16">
         <Reveal>
-          <h2 className="text-2xl md:text-3xl font-normal mb-8" style={{ letterSpacing: '-0.03em' }}>
+          <h2 className="accent-rule text-2xl md:text-3xl font-normal mb-8" style={{ letterSpacing: '-0.03em' }}>
             Common questions
           </h2>
           <div className="max-w-3xl space-y-3">
@@ -101,7 +103,7 @@ export default function ServicePage() {
             <a
               href="/docs/jai-civil-safety-documentation.pdf"
               download
-              className="mt-2 inline-flex items-center gap-2 rounded-lg border border-sand-50/20 liquid-glass px-6 py-3 text-sm font-medium transition-colors hover:bg-sand-100 hover:text-soil-950"
+              className="mt-2 inline-flex items-center gap-2 rounded-lg border border-sand-50/20 liquid-glass px-6 py-3 text-sm font-medium transition-colors hover:bg-clay-500 hover:text-soil-950"
             >
               <FileDown size={16} aria-hidden="true" />
               Download our safety documentation
@@ -123,7 +125,7 @@ export default function ServicePage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/contact"
-                className="bg-sand-100 text-soil-950 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-200"
+                className="bg-clay-500 text-soil-950 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-clay-400"
               >
                 Get a Quote
               </Link>
@@ -131,7 +133,7 @@ export default function ServicePage() {
                 href={whatsappLink(`Hi Jai Civil, I would like a quote for ${service.name.toLowerCase()}.`)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="liquid-glass border border-sand-50/20 text-sand-50 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-100 hover:text-soil-950"
+                className="liquid-glass border border-sand-50/20 text-sand-50 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-clay-500 hover:text-soil-950"
               >
                 WhatsApp {SITE.phoneDisplay}
               </a>
@@ -148,7 +150,7 @@ export default function ServicePage() {
               <Link
                 key={s.slug}
                 to={`/services/${s.slug}`}
-                className="liquid-glass group flex items-center justify-between gap-3 rounded-xl border border-sand-50/20 px-5 py-4 transition-colors hover:border-sand-50/40"
+                className="liquid-glass group flex items-center justify-between gap-3 rounded-xl border border-sand-50/20 px-5 py-4 transition-colors hover:border-clay-400/60"
               >
                 <span className="text-sm font-medium">{s.name}</span>
                 <ArrowRight

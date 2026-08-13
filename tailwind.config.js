@@ -20,10 +20,18 @@ export default {
           400: '#A28E71',
           500: '#83705A',
         },
+        /**
+         * Safety orange, the colour already all over the business: the
+         * excavator, the machine on the trailer, every cone on site. 400 is
+         * the text/icon stop (7.3:1 on soil-950); 500 is the button fill,
+         * which carries near-black text at 8:1.
+         */
         clay: {
-          400: '#D28E52',
-          500: '#BE7940',
-          600: '#9C5F2E',
+          200: '#FFD2A8',
+          300: '#FFAE68',
+          400: '#FF8A2B',
+          500: '#F26A0F',
+          600: '#C4520A',
         },
       },
     },

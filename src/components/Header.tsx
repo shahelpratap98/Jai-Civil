@@ -29,7 +29,9 @@ export default function Header() {
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `transition-colors hover:text-sand-300 ${isActive ? 'text-sand-50' : 'text-sand-100'}`
+                `transition-colors hover:text-clay-300 ${
+                  isActive ? 'text-clay-400 font-medium' : 'text-sand-100'
+                }`
               }
             >
               {link.label}
@@ -40,7 +42,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <Link
             to="/contact"
-            className="hidden sm:inline-block bg-sand-100 text-soil-950 px-6 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-sand-200"
+            className="hidden sm:inline-block bg-clay-500 text-soil-950 px-6 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-clay-400"
           >
             Get a Quote
           </Link>
@@ -65,7 +67,7 @@ export default function Header() {
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 `px-3 py-3 rounded-lg text-base transition-colors hover:bg-sand-50/10 ${
-                  isActive ? 'text-sand-50 bg-sand-50/5' : 'text-sand-100'
+                  isActive ? 'text-clay-400 bg-clay-500/10' : 'text-sand-100'
                 }`
               }
             >
@@ -75,7 +77,7 @@ export default function Header() {
           <Link
             to="/contact"
             onClick={() => setOpen(false)}
-            className="mt-2 bg-sand-100 text-soil-950 px-6 py-3 rounded-lg text-sm font-medium text-center transition-colors hover:bg-sand-200"
+            className="mt-2 bg-clay-500 text-soil-950 px-6 py-3 rounded-lg text-sm font-medium text-center transition-colors hover:bg-clay-400"
           >
             Get a Quote
           </Link>

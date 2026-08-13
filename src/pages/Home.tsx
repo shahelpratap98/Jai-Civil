@@ -81,13 +81,13 @@ export default function Home() {
                   <div className="flex flex-wrap gap-4">
                     <Link
                       to="/contact"
-                      className="bg-sand-100 text-soil-950 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-200"
+                      className="bg-clay-500 text-soil-950 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-clay-400"
                     >
                       Get a Quote
                     </Link>
                     <Link
                       to="/services"
-                      className="liquid-glass border border-sand-50/20 text-sand-50 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-100 hover:text-soil-950"
+                      className="liquid-glass border border-sand-50/20 text-sand-50 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-clay-500 hover:text-soil-950"
                     >
                       Our Services
                     </Link>
@@ -112,7 +112,7 @@ export default function Home() {
       <section className="px-6 md:px-12 lg:px-16 pt-24">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <Reveal>
-            <h2 className="text-3xl md:text-4xl font-normal mb-6" style={{ letterSpacing: '-0.03em' }}>
+            <h2 className="accent-rule text-3xl md:text-4xl font-normal mb-6" style={{ letterSpacing: '-0.03em' }}>
               One crew, from the first cut to the final fit off
             </h2>
             <p className="text-sand-300 leading-relaxed mb-4">
@@ -127,7 +127,7 @@ export default function Home() {
             </p>
             <Link
               to="/projects"
-              className="group inline-flex items-center gap-2 text-sm text-sand-300 transition-colors hover:text-sand-50"
+              className="group inline-flex items-center gap-2 text-sm text-sand-300 transition-colors hover:text-clay-300"
             >
               See our recent work
               <ArrowRight
@@ -156,12 +156,12 @@ export default function Home() {
       {/* Services grid */}
       <section className="px-6 md:px-12 lg:px-16 pt-20">
         <Reveal className="mb-10 flex flex-wrap items-end justify-between gap-4">
-          <h2 className="text-3xl md:text-4xl font-normal" style={{ letterSpacing: '-0.03em' }}>
+          <h2 className="accent-rule text-3xl md:text-4xl font-normal" style={{ letterSpacing: '-0.03em' }}>
             What we do
           </h2>
           <Link
             to="/services"
-            className="group inline-flex items-center gap-2 text-sm text-sand-300 transition-colors hover:text-sand-50"
+            className="group inline-flex items-center gap-2 text-sm text-sand-300 transition-colors hover:text-clay-300"
           >
             All services
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" aria-hidden="true" />
@@ -172,12 +172,14 @@ export default function Home() {
             <Reveal key={service.slug}>
               <Link
                 to={`/services/${service.slug}`}
-                className="liquid-glass group flex h-full flex-col rounded-xl border border-sand-50/20 p-6 transition-colors hover:border-sand-50/40"
+                className="liquid-glass group flex h-full flex-col rounded-xl border border-sand-50/20 p-6 transition-colors hover:border-clay-400/60"
               >
-                <ServiceIcon icon={service.icon} size={28} className="mb-4 text-clay-400" />
+                <span className="mb-4 inline-flex w-fit rounded-lg border border-clay-500/25 bg-clay-500/10 p-2.5 transition-colors group-hover:bg-clay-500/20">
+                  <ServiceIcon icon={service.icon} size={24} className="text-clay-400" />
+                </span>
                 <h3 className="text-lg font-medium mb-2">{service.name}</h3>
                 <p className="text-sm leading-relaxed text-sand-300 mb-4">{service.short}</p>
-                <span className="mt-auto inline-flex items-center gap-2 text-sm text-sand-300 transition-colors group-hover:text-sand-50">
+                <span className="mt-auto inline-flex items-center gap-2 text-sm text-sand-300 transition-colors group-hover:text-clay-400">
                   Learn more
                   <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" aria-hidden="true" />
                 </span>
@@ -190,7 +192,7 @@ export default function Home() {
       {/* Areas */}
       <section className="px-6 md:px-12 lg:px-16 pt-20">
         <Reveal>
-          <h2 className="text-3xl md:text-4xl font-normal mb-6" style={{ letterSpacing: '-0.03em' }}>
+          <h2 className="accent-rule text-3xl md:text-4xl font-normal mb-6" style={{ letterSpacing: '-0.03em' }}>
             Areas we serve
           </h2>
           <p className="max-w-2xl text-sand-300 leading-relaxed mb-8">
@@ -227,7 +229,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/contact"
-                className="bg-sand-100 text-soil-950 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-200"
+                className="bg-clay-500 text-soil-950 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-clay-400"
               >
                 Get a Quote
               </Link>
@@ -235,7 +237,7 @@ export default function Home() {
                 href={whatsappLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="liquid-glass border border-sand-50/20 text-sand-50 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-100 hover:text-soil-950"
+                className="liquid-glass border border-sand-50/20 text-sand-50 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-clay-500 hover:text-soil-950"
               >
                 WhatsApp {SITE.phoneDisplay}
               </a>

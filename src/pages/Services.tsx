@@ -32,12 +32,14 @@ export default function Services() {
             <Reveal key={service.slug}>
               <Link
                 to={`/services/${service.slug}`}
-                className="liquid-glass group flex h-full flex-col rounded-xl border border-sand-50/20 p-6 transition-colors hover:border-sand-50/40"
+                className="liquid-glass group flex h-full flex-col rounded-xl border border-sand-50/20 p-6 transition-colors hover:border-clay-400/60"
               >
-                <ServiceIcon icon={service.icon} size={28} className="mb-4 text-clay-400" />
+                <span className="mb-4 inline-flex w-fit rounded-lg border border-clay-500/25 bg-clay-500/10 p-2.5 transition-colors group-hover:bg-clay-500/20">
+                  <ServiceIcon icon={service.icon} size={24} className="text-clay-400" />
+                </span>
                 <h2 className="text-lg font-medium mb-2">{service.name}</h2>
                 <p className="text-sm leading-relaxed text-sand-300 mb-4">{service.short}</p>
-                <span className="mt-auto inline-flex items-center gap-2 text-sm text-sand-300 transition-colors group-hover:text-sand-50">
+                <span className="mt-auto inline-flex items-center gap-2 text-sm text-sand-300 transition-colors group-hover:text-clay-400">
                   View service
                   <ArrowRight
                     size={15}
@@ -64,7 +66,7 @@ export default function Services() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/contact"
-                className="bg-sand-100 text-soil-950 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-200"
+                className="bg-clay-500 text-soil-950 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-clay-400"
               >
                 Get a Quote
               </Link>
@@ -72,7 +74,7 @@ export default function Services() {
                 href={whatsappLink('Hi Jai Civil, I have a project and I am not sure which service fits. Here is what I need done: ')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="liquid-glass border border-sand-50/20 text-sand-50 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-sand-100 hover:text-soil-950"
+                className="liquid-glass border border-sand-50/20 text-sand-50 px-8 py-3 rounded-lg font-medium transition-colors hover:bg-clay-500 hover:text-soil-950"
               >
                 WhatsApp {SITE.phoneDisplay}
               </a>

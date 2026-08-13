@@ -36,7 +36,7 @@ export default function Contact() {
   }
 
   const inputClass =
-    'w-full rounded-lg border border-sand-50/20 bg-sand-50/5 px-4 py-3 text-sm text-sand-50 placeholder:text-sand-500 outline-none transition-colors focus:border-sand-50/50';
+    'w-full rounded-lg border border-sand-50/20 bg-sand-50/5 px-4 py-3 text-sm text-sand-50 placeholder:text-sand-500 outline-none transition-colors focus:border-clay-400';
 
   return (
     <>
@@ -65,7 +65,7 @@ export default function Contact() {
               <h2 className="text-2xl font-normal mb-2">Message sent</h2>
               <p className="text-sand-300">
                 Thanks, we have your details and will be in touch shortly. Need us sooner?{' '}
-                <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="underline hover:text-sand-50">
+                <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="underline hover:text-clay-300">
                   WhatsApp us
                 </a>
                 .
@@ -145,7 +145,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === 'sending'}
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-sand-100 px-8 py-3 font-medium text-soil-950 transition-colors hover:bg-sand-200 disabled:opacity-60"
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-clay-500 px-8 py-3 font-medium text-soil-950 transition-colors hover:bg-clay-400 disabled:opacity-60"
               >
                 {status === 'sending' && <Loader2 size={16} className="animate-spin" aria-hidden="true" />}
                 {status === 'sending' ? 'Sending…' : 'Send message'}
@@ -160,7 +160,7 @@ export default function Contact() {
             href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="liquid-glass flex items-center gap-4 rounded-xl border border-sand-50/20 p-6 transition-colors hover:border-sand-50/40"
+            className="liquid-glass flex items-center gap-4 rounded-xl border border-sand-50/20 p-6 transition-colors hover:border-clay-400/60"
           >
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-soil-950">
               <MessageCircle size={22} aria-hidden="true" />
@@ -172,7 +172,7 @@ export default function Contact() {
           </a>
           <a
             href={SITE.phoneHref}
-            className="liquid-glass flex items-center gap-4 rounded-xl border border-sand-50/20 p-6 transition-colors hover:border-sand-50/40"
+            className="liquid-glass flex items-center gap-4 rounded-xl border border-sand-50/20 p-6 transition-colors hover:border-clay-400/60"
           >
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sand-50/10">
               <Phone size={20} aria-hidden="true" />

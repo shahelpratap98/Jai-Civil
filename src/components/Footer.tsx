@@ -19,14 +19,14 @@ export default function Footer() {
             wide.
           </p>
           <div className="mt-5 space-y-2 text-sm text-sand-300">
-            <a href={SITE.phoneHref} className="flex items-center gap-2 hover:text-sand-50 transition-colors">
+            <a href={SITE.phoneHref} className="flex items-center gap-2 hover:text-clay-300 transition-colors">
               <Phone size={15} aria-hidden="true" /> {SITE.phoneDisplay}
             </a>
             <a
               href={whatsappLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-sand-50 transition-colors"
+              className="flex items-center gap-2 hover:text-clay-300 transition-colors"
             >
               <MessageCircle size={15} aria-hidden="true" /> WhatsApp us
             </a>
@@ -40,11 +40,11 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="text-sm font-medium mb-4 text-sand-100">Services</p>
+          <p className="text-sm font-medium mb-4 text-clay-400">Services</p>
           <ul className="space-y-2 text-sm text-sand-300">
             {SERVICES.map((s) => (
               <li key={s.slug}>
-                <Link to={`/services/${s.slug}`} className="hover:text-sand-50 transition-colors">
+                <Link to={`/services/${s.slug}`} className="hover:text-clay-300 transition-colors">
                   {s.name}
                 </Link>
               </li>
@@ -53,7 +53,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="text-sm font-medium mb-4 text-sand-100">Areas we serve</p>
+          <p className="text-sm font-medium mb-4 text-clay-400">Areas we serve</p>
           <ul className="space-y-2 text-sm text-sand-300">
             {SITE.areas.map((area) => (
               <li key={area}>{area}</li>
