@@ -36,7 +36,12 @@ body {
   overflow: hidden;
 }
 
+/* Panels over the video carry more of their own darkness than the ones on the
+   flat page. At 0.45 the nav washed out to light grey whenever bright sky
+   passed behind it, and cream text on light grey is unreadable at any size.
+   At 0.68 the worst case still measures about 7:1 and it reads as glass. */
 .liquid-glass.over-media {
+  background: rgba(23, 16, 8, 0.68);
   background-blend-mode: luminosity;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
