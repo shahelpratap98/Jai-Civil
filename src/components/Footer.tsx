@@ -3,6 +3,7 @@ import { Phone, MapPin, Clock, MessageCircle } from 'lucide-react';
 import { SITE, whatsappLink } from '../siteConfig';
 import { SERVICES } from '../data/services';
 import { REVIEW_SUMMARY } from '../data/reviews';
+import Logo from './Logo';
 import Stars from './Stars';
 
 /** Jai Civil has been trading since 2014, so the notice runs as a range. */
@@ -15,7 +16,7 @@ export default function Footer() {
     <footer className="border-t border-sand-50/10 mt-24">
       <div className="px-6 md:px-12 lg:px-16 py-14 grid gap-10 md:grid-cols-3">
         <div>
-          <p className="text-2xl font-semibold tracking-tight mb-3">JAI CIVIL LIMITED</p>
+          <Logo markSize={42} className="mb-4" />
           <p className="text-sand-300 text-sm leading-relaxed max-w-xs">
             Papakura based civil, earthworks and building contractor. Auckland, Waikato and New
             Zealand wide.

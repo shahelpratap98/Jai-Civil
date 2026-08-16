@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 40" width="260" height="40" role="img" aria-label="Jai Civil Limited">
+  <title>Jai Civil Limited</title>
+  <rect x="0.9" y="0.9" width="38.2" height="38.2" rx="9.4" fill="#20160C" stroke="rgba(246,240,228,0.2)" stroke-width="1.8"/>
+  <rect x="9" y="10.5" width="9" height="4.2" rx="1.4" fill="#FFAE68"/>
+  <rect x="9" y="17.9" width="15.5" height="4.2" rx="1.4" fill="#FF8A2B"/>
+  <rect x="9" y="25.3" width="22" height="4.2" rx="1.4" fill="#F26A0F"/>
+  <text x="53" y="21" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="600" letter-spacing="-0.6" fill="#F6F0E4">JAI CIVIL</text>
+  <text x="53.5" y="33" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="500" letter-spacing="3.1" fill="#A28E71">LIMITED</text>
+</svg>

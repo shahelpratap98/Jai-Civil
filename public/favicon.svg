@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#20160C"/>
-  <rect width="62" height="62" x="1" y="1" rx="13" fill="none" stroke="rgba(246,240,228,0.25)" stroke-width="2"/>
-  <text x="32" y="42" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600" fill="#F6F0E4" text-anchor="middle" letter-spacing="-1">JC</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <rect width="40" height="40" rx="9.4" fill="#20160C"/>
+  <rect x="9" y="10.5" width="9" height="4.2" rx="1.4" fill="#FFAE68"/>
+  <rect x="9" y="17.9" width="15.5" height="4.2" rx="1.4" fill="#FF8A2B"/>
+  <rect x="9" y="25.3" width="22" height="4.2" rx="1.4" fill="#F26A0F"/>
 </svg>

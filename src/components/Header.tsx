@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import Logo from './Logo';
 
 const LINKS = [
   { to: '/', label: 'Home' },
@@ -15,12 +16,8 @@ export default function Header() {
   return (
     <div className="px-6 md:px-12 lg:px-16 pt-6 relative z-40">
       <nav className="liquid-glass over-media rounded-xl px-4 py-2 flex items-center justify-between">
-        <Link
-          to="/"
-          className="text-xl sm:text-2xl font-semibold tracking-tight whitespace-nowrap"
-          onClick={() => setOpen(false)}
-        >
-          JAI CIVIL LIMITED
+        <Link to="/" aria-label="Jai Civil Limited, home" onClick={() => setOpen(false)}>
+          <Logo />
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm">
