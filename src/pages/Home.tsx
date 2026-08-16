@@ -7,9 +7,11 @@ import FadeIn from '../components/FadeIn';
 import Photo from '../components/Photo';
 import Reveal from '../components/Reveal';
 import Reviews from '../components/Reviews';
+import StatsBar from '../components/StatsBar';
 import ReviewStrip from '../components/ReviewStrip';
 import ServiceIcon from '../components/ServiceIcon';
-import { SERVICES } from '../data/services';
+import { FEATURED_SERVICES, SERVICES } from '../data/services';
+import { GALLERY } from '../data/gallery';
 import { SITE, whatsappLink } from '../siteConfig';
 
 /**
@@ -118,123 +120,93 @@ export default function Home() {
         </div>
       </div>
 
-      {/* One crew, start to finish */}
-      <section className="px-6 md:px-12 lg:px-16 pt-24">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
-          <Reveal>
-            <h2 className="accent-rule text-3xl md:text-4xl font-normal mb-6" style={{ letterSpacing: '-0.03em' }}>
-              One crew, from the first cut to the final fit off
-            </h2>
-            <p className="text-sand-300 leading-relaxed mb-4">
-              Jai Civil Limited is a Papakura based contractor that covers the whole chain: we
-              cut and prepare the site, build the driveway and put up the structure under a
-              Licensed Building Practitioner. No handover gaps between an earthworks company and
-              a builder, because we are both.
-            </p>
-            <p className="text-sand-300 leading-relaxed mb-6">
-              We run two yards, {SITE.address.suburb} in South Auckland and{' '}
-              {SITE.depot.suburb} in the {SITE.depot.region}, so we cover greater Auckland and
-              the greater {SITE.depot.region} as home turf, and travel New Zealand wide for the
-              right projects.
-            </p>
-            <Link
-              to="/projects"
-              className="group inline-flex items-center gap-2 text-sm text-sand-300 transition-colors hover:text-clay-300"
-            >
-              See our recent work
-              <ArrowRight
-                size={16}
-                className="transition-transform group-hover:translate-x-1"
-                aria-hidden="true"
-              />
-            </Link>
-          </Reveal>
-          <Reveal>
-            <figure className="overflow-hidden rounded-xl border border-sand-50/20">
-              <Photo
-                src="/projects/excavators-sunset.jpg"
-                alt="Two Jai Civil excavators parked on a cut building platform at sunset"
-                sizes="(min-width: 1024px) 45vw, 92vw"
-                className="h-auto w-full"
-              />
-              <figcaption className="liquid-glass over-media px-5 py-3 text-sm text-sand-200">
-                Machines parked up after a day cutting platforms.
-              </figcaption>
-            </figure>
-          </Reveal>
-        </div>
-      </section>
+      <StatsBar />
 
-      {/* Services grid */}
+      {/* Services: the three the business leads with */}
       <section className="px-6 md:px-12 lg:px-16 pt-20">
-        <Reveal className="mb-10 flex flex-wrap items-end justify-between gap-4">
+        <Reveal className="mb-10 max-w-3xl">
           <h2 className="accent-rule text-3xl md:text-4xl font-normal" style={{ letterSpacing: '-0.03em' }}>
             What we do
           </h2>
-          <Link
-            to="/services"
-            className="group inline-flex items-center gap-2 text-sm text-sand-300 transition-colors hover:text-clay-300"
-          >
-            All services
-            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" aria-hidden="true" />
-          </Link>
+          <p className="mt-4 text-sand-300 leading-relaxed">
+            One crew from the first cut to the final fit off. We cut and prepare the site, build
+            the access and put up the structure under a Licensed Building Practitioner, out of
+            two yards in {SITE.address.suburb} and {SITE.depot.suburb}.
+          </p>
         </Reveal>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((service) => (
+        <div className="grid gap-5 md:grid-cols-3">
+          {FEATURED_SERVICES.map((service) => (
             <Reveal key={service.slug}>
               <Link
                 to={`/services/${service.slug}`}
-                className="liquid-glass group flex h-full flex-col rounded-xl border border-sand-50/20 p-6 transition-colors hover:border-clay-400/60"
+                className="group flex h-full flex-col overflow-hidden rounded-xl border border-sand-50/20 transition-colors hover:border-clay-400/60"
               >
-                <span className="mb-4 inline-flex w-fit rounded-lg border border-clay-500/25 bg-clay-500/10 p-2.5 transition-colors group-hover:bg-clay-500/20">
-                  <ServiceIcon icon={service.icon} size={24} className="text-clay-400" />
-                </span>
-                <h3 className="text-lg font-medium mb-2">{service.name}</h3>
-                <p className="text-sm leading-relaxed text-sand-300 mb-4">{service.short}</p>
-                <span className="mt-auto inline-flex items-center gap-2 text-sm text-sand-300 transition-colors group-hover:text-clay-400">
-                  Learn more
-                  <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" aria-hidden="true" />
-                </span>
+                <div className="relative overflow-hidden">
+                  <Photo
+                    src={service.cardImage!}
+                    alt={service.cardImageAlt ?? service.name}
+                    sizes="(min-width: 768px) 32vw, 92vw"
+                    className="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
+                  <span className="absolute left-4 top-4 inline-flex rounded-lg border border-clay-500/30 bg-soil-950/70 p-2.5">
+                    <ServiceIcon icon={service.icon} size={22} className="text-clay-400" />
+                  </span>
+                </div>
+                <div className="liquid-glass flex flex-1 flex-col p-6">
+                  <h3 className="text-lg font-medium mb-2">{service.name}</h3>
+                  <p className="text-sm leading-relaxed text-sand-300 mb-4">{service.short}</p>
+                  <span className="mt-auto inline-flex items-center gap-2 text-sm text-sand-300 transition-colors group-hover:text-clay-400">
+                    Learn more
+                    <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                  </span>
+                </div>
               </Link>
             </Reveal>
           ))}
         </div>
-      </section>
-
-      {/* Areas */}
-      <section className="px-6 md:px-12 lg:px-16 pt-20">
-        <Reveal>
-          <h2 className="accent-rule text-3xl md:text-4xl font-normal mb-6" style={{ letterSpacing: '-0.03em' }}>
-            Areas we serve
-          </h2>
-          <p className="max-w-2xl text-sand-300 leading-relaxed mb-10">
-            Two bases: our {SITE.address.suburb} yard covers the whole Auckland region, and our{' '}
-            {SITE.depot.suburb} yard covers the greater {SITE.depot.region}. We travel New Zealand
-            wide for larger projects.
-          </p>
-          <div className="space-y-7">
-            {SITE.areaGroups.map((group) => (
-              <div key={group.region}>
-                <p className="mb-3 text-sm font-medium uppercase tracking-wider text-clay-400">
-                  {group.region}
-                </p>
-                <ul className="flex flex-wrap gap-3">
-                  {group.areas.map((area) => (
-                    <li
-                      key={area}
-                      className="liquid-glass rounded-lg border border-sand-50/20 px-4 py-2 text-sm text-sand-100"
-                    >
-                      {area}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-            <p className="text-sm text-clay-400">+ New Zealand wide for larger projects</p>
-          </div>
+        <Reveal className="mt-8">
+          <Link
+            to="/services"
+            className="group inline-flex items-center gap-2 text-sm text-sand-300 transition-colors hover:text-clay-300"
+          >
+            All {SERVICES.length} services
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" aria-hidden="true" />
+          </Link>
         </Reveal>
       </section>
 
+      {/* Our work */}
+      <section className="px-6 md:px-12 lg:px-16 pt-20">
+        <Reveal className="mb-10 flex flex-wrap items-end justify-between gap-4">
+          <h2 className="accent-rule text-3xl md:text-4xl font-normal" style={{ letterSpacing: '-0.03em' }}>
+            Our work
+          </h2>
+          <Link
+            to="/projects"
+            className="group inline-flex items-center gap-2 text-sm text-sand-300 transition-colors hover:text-clay-300"
+          >
+            See all projects
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" aria-hidden="true" />
+          </Link>
+        </Reveal>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {GALLERY.slice(0, 6).map((photo) => (
+            <Reveal key={photo.src}>
+              <figure className="liquid-glass overflow-hidden rounded-xl border border-sand-50/20">
+                <Photo
+                  src={photo.src}
+                  alt={photo.alt}
+                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 92vw"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+                <figcaption className="px-5 py-4 text-sm leading-relaxed text-sand-200">
+                  {photo.caption}
+                </figcaption>
+              </figure>
+            </Reveal>
+          ))}
+        </div>
+      </section>
       <Reviews />
 
       {/* CTA */}

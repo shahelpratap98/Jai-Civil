@@ -27,6 +27,9 @@ export type Service = {
     | 'Construction'
     | 'Waves'
     | 'TreePine';
+  /** Card image on the home page, for the featured three. */
+  cardImage?: string;
+  cardImageAlt?: string;
   /** Optional photo shown on the service page (path under public/). */
   image?: string;
   imageAlt?: string;
@@ -48,6 +51,8 @@ export const SERVICES: Service[] = [
     icon: 'Mountain',
     short:
       'General earthworks and excavation for residential and commercial sites: cuts, fills, trenching and site shaping.',
+    cardImage: '/projects/svc-earthworks.jpg',
+    cardImageAlt: 'Excavator cutting a benched building platform into a hillside at golden hour',
     seoTitle: 'Earthworks & Excavation Auckland',
     metaDescription:
       'Earthworks and excavation across Auckland from a Papakura based civil contractor. Site cuts, fills, trenching and ground shaping for residential and commercial projects. Free quotes.',
@@ -89,6 +94,8 @@ export const SERVICES: Service[] = [
     icon: 'Route',
     short:
       'Road construction, farm races, right of ways and driveways: boxed, metalled and finished to handle Auckland weather.',
+    cardImage: '/projects/svc-roading.jpg',
+    cardImageAlt: 'Newly built gravel driveway curving through a rural property',
     seoTitle: 'Roading & Driveway Construction Auckland',
     metaDescription:
       'Driveway and road construction across Auckland. Excavation, boxing, metal courses and finishing for driveways, right of ways, farm races and small roads. Papakura based. Free quotes.',
@@ -387,6 +394,8 @@ export const SERVICES: Service[] = [
     icon: 'Layers',
     short:
       'Timber, concrete and block retaining walls, engineered where required, with the drainage behind them done properly.',
+    cardImage: '/projects/svc-retaining.jpg',
+    cardImageAlt: 'Finished timber pole retaining wall holding a cut bank, with gravel backfill',
     seoTitle: 'Retaining Wall Builders Auckland',
     metaDescription:
       'Retaining wall construction in Auckland and New Zealand wide. Timber, concrete and block walls with proper drainage, built by a civil and earthworks contractor. Free quotes.',
@@ -546,6 +555,19 @@ export const SERVICES: Service[] = [
     ],
   },
 ];
+
+/**
+ * The three the home page leads with. Everything else stays one click away on
+ * /services, which keeps the home page short without losing any SEO page.
+ * These three are the company's core civil trade: the excavating work its
+ * Companies Register classification names, the roading that follows it, and
+ * retaining, which is the job its own supplied photos show most.
+ */
+export const FEATURED_SLUGS = ['earthworks', 'roading-driveways', 'retaining-walls'] as const;
+
+export const FEATURED_SERVICES: Service[] = FEATURED_SLUGS.map(
+  (slug) => SERVICES.find((s) => s.slug === slug)!
+);
 
 export function serviceBySlug(slug: string): Service | undefined {
   return SERVICES.find((s) => s.slug === slug);
