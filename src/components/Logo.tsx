@@ -39,7 +39,9 @@ export default function Logo({
       </svg>
       <span className="leading-none">
         <span className="block text-lg sm:text-xl font-semibold tracking-tight">JAI CIVIL</span>
-        <span className="mt-1 block text-[9px] sm:text-[10px] font-medium tracking-[0.34em] text-sand-400">
+        {/* sand-200 not sand-400, and less tracking: at this size the muted
+            tone and the wide letter spacing together made it unreadable. */}
+        <span className="mt-1 block text-[10px] sm:text-[11px] font-semibold tracking-[0.24em] text-sand-200">
           LIMITED
         </span>
       </span>
