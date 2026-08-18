@@ -17,8 +17,9 @@
  */
 const ENDPOINT = 'https://api.web3forms.com/submit';
 
-/** PLACEHOLDER: swap for the real key from web3forms.com (free, no account). */
-export const WEB3FORMS_ACCESS_KEY = 'REPLACE_WITH_WEB3FORMS_ACCESS_KEY';
+/** Public write-only submission token for jaicivilltd@gmail.com, supplied by the
+ *  owner 2026-08-18. Not a secret: it only permits posting to that one inbox. */
+export const WEB3FORMS_ACCESS_KEY = '05fd93fd-96aa-494e-81b1-1ee803205925';
 
 export type Enquiry = {
   name: string;
