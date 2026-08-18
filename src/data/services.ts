@@ -53,6 +53,8 @@ export const SERVICES: Service[] = [
       'General earthworks and excavation for residential and commercial sites: cuts, fills, trenching and site shaping.',
     cardImage: '/projects/svc-earthworks.jpg',
     cardImageAlt: 'Excavator cutting a benched building platform into a hillside at golden hour',
+    image: '/projects/earthworks-cut-to-fill.jpg',
+    imageAlt: 'Excavator loading an articulated dump truck on a cut to fill earthworks job',
     seoTitle: 'Earthworks & Excavation Auckland',
     metaDescription:
       'Earthworks and excavation across Auckland. Site cuts, fills, trenching and ground shaping for residential and commercial projects. Free quotes.',
@@ -96,6 +98,8 @@ export const SERVICES: Service[] = [
       'Road construction, farm races, right of ways and driveways: boxed, metalled and finished to handle Auckland weather.',
     cardImage: '/projects/svc-roading.jpg',
     cardImageAlt: 'Newly built gravel driveway curving through a rural property',
+    image: '/projects/rural-road-metal.jpg',
+    imageAlt: 'Freshly metalled and compacted rural road running over a hill',
     seoTitle: 'Roading & Driveway Construction Auckland',
     metaDescription:
       'Driveway and road construction across Auckland. Excavation, boxing, metal courses and finishing for driveways, right of ways, farm races and small roads. Auckland based. Free quotes.',
@@ -137,6 +141,8 @@ export const SERVICES: Service[] = [
     icon: 'LandPlot',
     short:
       'Section clearing, demolition preparation and site establishment so your build starts on a clean, workable site.',
+    image: '/projects/grader-platform.jpg',
+    imageAlt: 'Grader shaping a rural building platform ready for metal',
     seoTitle: 'Site Preparation & Section Clearing Auckland',
     metaDescription:
       'Site preparation and section clearing across Auckland. Vegetation removal, strip and stockpile, access, hardstands and building platform preparation across the region.',
@@ -178,6 +184,8 @@ export const SERVICES: Service[] = [
     icon: 'Trees',
     short:
       'Structural landscaping backed by real earthmoving gear: levelling, lawns, drainage and outdoor areas that last.',
+    image: '/projects/svc-landscaping.jpg',
+    imageAlt: 'Finished back yard with new lawn, timber edging and planted borders',
     seoTitle: 'Landscaping South Auckland',
     metaDescription:
       'Structural landscaping across Auckland. Ground levelling, lawn preparation, drainage and outdoor areas built by a civil and earthworks contractor. Free quotes.',
@@ -353,6 +361,8 @@ export const SERVICES: Service[] = [
     icon: 'TreePine',
     short:
       'Tree felling, removals and vegetation clearing with a qualified arborist on the team and machines to clear the site after.',
+    image: '/projects/svc-tree-felling.jpg',
+    imageAlt: 'Excavator with a grapple stacking felled logs on a cleared rural site',
     seoTitle: 'Tree Felling, Arborist & Clearing Auckland',
     metaDescription:
       'Tree felling, removals and vegetation clearing across Auckland and the Waikato. Qualified arborist plus the machines to mulch, cart away and leave the site clear. Free quotes.',
@@ -396,6 +406,8 @@ export const SERVICES: Service[] = [
       'Timber, concrete and block retaining walls, engineered where required, with the drainage behind them done properly.',
     cardImage: '/projects/svc-retaining.jpg',
     cardImageAlt: 'Finished timber pole retaining wall holding a cut bank, with gravel backfill',
+    image: '/projects/retaining-wall-poles.jpg',
+    imageAlt: 'Post driver setting timber poles for a retaining wall against a fresh cut',
     seoTitle: 'Retaining Wall Builders Auckland',
     metaDescription:
       'Retaining wall construction in Auckland and New Zealand wide. Timber, concrete and block walls with proper drainage, built by a civil and earthworks contractor. Free quotes.',
@@ -437,6 +449,8 @@ export const SERVICES: Service[] = [
     icon: 'Fence',
     short:
       'Decks, pergolas and outdoor living areas, built under an LBP with the groundwork and drainage handled by the same crew.',
+    image: '/projects/svc-decks.jpg',
+    imageAlt: 'Finished timber deck and pergola off the back of a modern home',
     seoTitle: 'Deck Builders & Outdoor Living Auckland',
     metaDescription:
       'Deck building and outdoor living areas in Auckland and New Zealand wide. Decks, pergolas, patios and landscaped outdoor spaces built under an LBP by Jai Civil. Free quotes.',
@@ -478,6 +492,8 @@ export const SERVICES: Service[] = [
     icon: 'HardHat',
     short:
       'Licensed Building Practitioner building work, from decks and fences to full builds, with the site works done in house.',
+    image: '/projects/precast-panels.jpg',
+    imageAlt: 'Propped precast concrete wall panels standing beside a reinforced footing',
     seoTitle: 'LBP Builders South Auckland',
     metaDescription:
       'LBP building work across Auckland from Jai Civil. New builds, decks, fences and structural work, with earthworks and site preparation handled by the same crew.',
@@ -519,6 +535,8 @@ export const SERVICES: Service[] = [
     icon: 'Hammer',
     short:
       'Home renovations and kitchen installations, managed end to end by the same team that handles the structural work.',
+    image: '/projects/svc-kitchen.jpg',
+    imageAlt: 'Finished modern kitchen with island, stone benchtop and dark cabinetry',
     seoTitle: 'Home Renovations & Kitchens Auckland',
     metaDescription:
       'Home renovations and kitchen installations across Auckland. Structural alterations, interior upgrades and kitchens from a contractor with LBP building cover.',
