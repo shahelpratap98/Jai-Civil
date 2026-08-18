@@ -40,19 +40,21 @@ WhatsApp click-to-chat uses +64 21 215 4714 (from the company's public listing).
 
 ## Launch TODOs (placeholders to swap)
 
+- [ ] **Web3Forms access key**: `WEB3FORMS_ACCESS_KEY` in `src/lib/sendEnquiry.ts` is
+      still a placeholder, so the form shows "not connected yet" and points people at
+      WhatsApp and the phone number. Get the key from web3forms.com (it is emailed to
+      jaicivilltd@gmail.com, which the owner controls) and paste it in.
 - [ ] **Domain**: `https://jaicivil.co.nz` is a placeholder in `src/siteConfig.ts` and
-      `scripts/prerender.mjs`. Set the real domain in both.
-- [ ] **Email**: contact form env vars are unset. In Vercel, set `RESEND_API_KEY`,
-      `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`. Until then the form returns a friendly
-      error pointing at WhatsApp/phone.
-- [ ] **Hero video**: currently a reused Higgsfield clip (CloudFront URL in
-      `src/pages/Home.tsx`). Replace with the Jai Civil specific seamless loop once
-      generated (Seedance 2.0, start+end same-frame loop trick).
+      `scripts/prerender.mjs`. Set the real domain in both. Registering it also unlocks
+      Resend with a proper quotes@jaicivil.co.nz sender.
 - [ ] **og-image**: no `public/og-image.jpg` yet, so og:image/twitter tags are
       deliberately omitted in `scripts/prerender.mjs`. Add a real 1200x630 image and
       re-enable the tags.
-- [ ] **Project photos**: `/projects` describes typical work honestly with no photos.
-      Add a gallery when real job photos are supplied.
+- [ ] **Safety documentation**: `/docs/jai-civil-safety-documentation.pdf` is linked from
+      every service page FAQ but the file has not been supplied.
+- [ ] **Stats**: `StatsBar.tsx` shows years trading, the Google rating, yards and
+      coverage. Swap in a project count or safety record if the owner confirms real
+      numbers.
 
 ## Facts sources
 
