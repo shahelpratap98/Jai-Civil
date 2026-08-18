@@ -97,7 +97,7 @@ export default function Contact() {
               </div>
               <div className="mt-4">
                 <label htmlFor="service" className="mb-1.5 block text-sm text-sand-200">
-                  What do you need done?
+                  What do you need to be done?
                 </label>
                 <select id="service" name="service" defaultValue="" className={inputClass}>
                   <option value="" className="bg-soil-900">

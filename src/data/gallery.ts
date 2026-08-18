@@ -29,24 +29,24 @@ export const GALLERY: GalleryPhoto[] = [
     caption: 'Fresh metal courses laid and compacted on a rural road.',
   },
   {
-    src: '/projects/reinforcing-steel.jpg',
-    alt: 'Reinforcing steel cage tied in a footing trench',
-    caption: 'Reinforcing steel tied, spaced and ready for inspection.',
+    src: '/projects/road-shoulder-drainage.jpg',
+    alt: 'Excavator and tipper truck working the shoulder of a rural highway behind a cone taper, with traffic queued past the site',
+    caption: 'Shoulder widening and drainage on a main road, under live traffic management.',
   },
   {
-    src: '/projects/foundation-pour.jpg',
-    alt: 'Concrete mixer truck discharging into a reinforced footing while a worker screeds',
-    caption: 'Pour day: placing and screeding a reinforced footing.',
+    src: '/projects/road-drain-excavator.jpg',
+    alt: 'Excavator cutting a drain along the edge of a sealed rural road with cones and a stop go controller',
+    caption: 'Cutting the side drain back in along the road edge.',
   },
   {
-    src: '/projects/foundation-setout.jpg',
-    alt: 'Crew setting out strip footings with a laser level beside a commercial building',
-    caption: 'Setting out strip footings to the engineer’s levels.',
+    src: '/projects/road-shoulder-loading.jpg',
+    alt: 'Excavator loading spoil into a tipper truck on the road shoulder with cones and a variable message board',
+    caption: 'Loading spoil straight to the truck so the lane reopens the same day.',
   },
   {
-    src: '/projects/foundation-finished.jpg',
-    alt: 'Finished concrete foundation wall and freshly floated footing',
-    caption: 'Formed, poured and floated: a finished retaining foundation.',
+    src: '/projects/road-shoulder-diggers.jpg',
+    alt: 'Two excavators working a metalled road shoulder past a temporary 30 kilometre speed sign',
+    caption: 'Two machines on the shoulder behind a temporary 30 zone.',
   },
   {
     src: '/projects/retention-pond.jpg',
@@ -57,5 +57,25 @@ export const GALLERY: GalleryPhoto[] = [
     src: '/projects/excavators-sunset.jpg',
     alt: 'Two excavators parked on a cut building platform at sunset',
     caption: 'Machines parked up after a day cutting platforms.',
+  },
+  {
+    src: '/projects/raft-slab-steel.jpg',
+    alt: 'Reinforcing steel and void formers laid out across a raft slab inside a sheet piled excavation, apartment tower behind',
+    caption: 'Raft slab steel and void formers tied out inside the shored excavation.',
+  },
+  {
+    src: '/projects/deck-steel-cranes.jpg',
+    alt: 'Beam cages and slab reinforcing on a commercial deck with tower cranes overhead',
+    caption: 'Beam cages and deck steel on a commercial build, cranes overhead.',
+  },
+  {
+    src: '/projects/column-starters.jpg',
+    alt: 'Column starter bars standing above a formed foundation beam on an urban construction site',
+    caption: 'Column starters set and the ground beam boxed, ready to pour.',
+  },
+  {
+    src: '/projects/precast-panels.jpg',
+    alt: 'Propped precast concrete wall panels standing beside a reinforced footing on a new build',
+    caption: 'Precast panels propped and the footing steel run out alongside.',
   },
 ];

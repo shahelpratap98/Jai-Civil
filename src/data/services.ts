@@ -5,7 +5,7 @@
  * Copy rules (SEO playbook): no invented stats, prices, review counts or
  * certifications. Everything stated here comes from what the company publicly
  * says about itself: civil and earthworks, roads, LBP building, renovations,
- * kitchens, landscaping, retaining and decks, Papakura based, Auckland and NZ wide.
+ * kitchens, landscaping, retaining and decks, Auckland based, NZ wide.
  */
 
 export type Faq = { question: string; answer: string };
@@ -55,10 +55,10 @@ export const SERVICES: Service[] = [
     cardImageAlt: 'Excavator cutting a benched building platform into a hillside at golden hour',
     seoTitle: 'Earthworks & Excavation Auckland',
     metaDescription:
-      'Earthworks and excavation across Auckland from a Papakura based civil contractor. Site cuts, fills, trenching and ground shaping for residential and commercial projects. Free quotes.',
+      'Earthworks and excavation across Auckland. Site cuts, fills, trenching and ground shaping for residential and commercial projects. Free quotes.',
     h1: 'Earthworks and excavation across Auckland',
     intro: [
-      'Jai Civil is a Papakura based civil and earthworks contractor working across greater Auckland. Earthworks is the core of what we do: cutting, filling, shaping and compacting ground so the next stage of your project starts on a solid, accurate platform.',
+      'Jai Civil is an Auckland based civil and earthworks contractor. Earthworks is the core of what we do: cutting, filling, shaping and compacting ground so the next stage of your project starts on a solid, accurate platform.',
       'We handle jobs from tight residential sections through to larger commercial and rural sites. Because we also build, we understand what the trades that follow us need: correct levels, clean benches, stable batters and a site that drains the right way.',
     ],
     includesTitle: 'Earthworks services we provide',
@@ -79,7 +79,7 @@ export const SERVICES: Service[] = [
       {
         question: 'Which areas do you cover for earthworks?',
         answer:
-          'We are based in Papakura and work across greater Auckland, including Manukau, Franklin, the North Shore, Waitākere, Rodney and Waiheke Island, as well as the Waikato, and we travel New Zealand wide for larger projects.',
+          'We work across greater Auckland, including Manukau, Franklin, the North Shore, Waitākere, Rodney and Waiheke Island, as well as the Waikato, and we travel New Zealand wide for larger projects.',
       },
       {
         question: 'Can you work to engineered drawings?',
@@ -98,7 +98,7 @@ export const SERVICES: Service[] = [
     cardImageAlt: 'Newly built gravel driveway curving through a rural property',
     seoTitle: 'Roading & Driveway Construction Auckland',
     metaDescription:
-      'Driveway and road construction across Auckland. Excavation, boxing, metal courses and finishing for driveways, right of ways, farm races and small roads. Papakura based. Free quotes.',
+      'Driveway and road construction across Auckland. Excavation, boxing, metal courses and finishing for driveways, right of ways, farm races and small roads. Auckland based. Free quotes.',
     h1: 'Roading and driveway construction',
     intro: [
       'A driveway or private road only lasts as long as what is underneath it. We build ours from the ground up: correct excavation, proper basecourse, compaction in layers and drainage that moves water off the surface instead of under it.',
@@ -139,7 +139,7 @@ export const SERVICES: Service[] = [
       'Section clearing, demolition preparation and site establishment so your build starts on a clean, workable site.',
     seoTitle: 'Site Preparation & Section Clearing Auckland',
     metaDescription:
-      'Site preparation and section clearing across Auckland. Vegetation removal, strip and stockpile, access, hardstands and building platform preparation from a Papakura based contractor.',
+      'Site preparation and section clearing across Auckland. Vegetation removal, strip and stockpile, access, hardstands and building platform preparation across the region.',
     h1: 'Site preparation and section clearing',
     intro: [
       'Before anything can be built, the site has to be ready: cleared, stripped, accessible and safe. Jai Civil prepares residential sections and commercial sites across Auckland so that builders, drainlayers and other trades can start work without delays.',
@@ -178,13 +178,13 @@ export const SERVICES: Service[] = [
     icon: 'Trees',
     short:
       'Structural landscaping backed by real earthmoving gear: levelling, lawns, drainage and outdoor areas that last.',
-    seoTitle: 'Landscaping Papakura & South Auckland',
+    seoTitle: 'Landscaping South Auckland',
     metaDescription:
-      'Structural landscaping in Papakura and across Auckland. Ground levelling, lawn preparation, drainage and outdoor areas built by a civil and earthworks contractor. Free quotes.',
+      'Structural landscaping across Auckland. Ground levelling, lawn preparation, drainage and outdoor areas built by a civil and earthworks contractor. Free quotes.',
     h1: 'Landscaping built on proper groundwork',
     intro: [
       'Good landscaping starts under the surface. As an earthworks contractor, Jai Civil brings the machines and groundwork knowledge that most landscape jobs actually need: shaping, drainage and compaction done properly before anything decorative goes in.',
-      'We take on structural landscaping across Papakura, South Auckland and the wider region, working in alongside your planting or design plans.',
+      'We take on structural landscaping across South Auckland and the wider region, working in alongside your planting or design plans.',
     ],
     includesTitle: 'Landscaping work we take on',
     includes: [
@@ -227,7 +227,7 @@ export const SERVICES: Service[] = [
     h1: 'Equipment hire',
     intro: [
       'Jai Civil hires out the same gear that services our own jobs, with operators who know sites, not just roads. The headline unit is our 6W tipper truck hire: an Isuzu 6 wheeler tipper with a transporter trailer, available with an experienced driver for cartage and machine moves.',
-      'The tipper covers metal and aggregate deliveries, topsoil in, spoil and cleanfill out, and machine shifts on the trailer. Our earthmoving machines are also available with operators by arrangement. Based in Papakura, working across Auckland and New Zealand wide.',
+      'The tipper covers metal and aggregate deliveries, topsoil in, spoil and cleanfill out, and machine shifts on the trailer. Our earthmoving machines are also available with operators by arrangement. Auckland based, working across Auckland and New Zealand wide.',
     ],
     includesTitle: 'What is available for hire',
     includes: [
@@ -343,7 +343,7 @@ export const SERVICES: Service[] = [
       {
         question: 'How far do you travel for this work?',
         answer:
-          'From Papakura and our Huntly yard we cover Auckland and the greater Waikato as standard, and travel New Zealand wide for larger protection projects.',
+          'From our Auckland and Huntly yards we cover Auckland and the greater Waikato as standard, and travel New Zealand wide for larger protection projects.',
       },
     ],
   },
@@ -402,7 +402,7 @@ export const SERVICES: Service[] = [
     h1: 'Retaining walls built to hold',
     intro: [
       'A retaining wall is only as good as what you cannot see: the founding, the drainage behind it and the compaction around it. As an earthworks and civil contractor, Jai Civil builds retaining walls from the ground conditions up, not just from the timber out.',
-      'We build walls for driveways, building platforms, section boundaries and slips, from Papakura across Auckland and New Zealand wide for larger projects.',
+      'We build walls for driveways, building platforms, section boundaries and slips, across Auckland and New Zealand wide for larger projects.',
     ],
     includesTitle: 'Retaining wall work we do',
     includes: [
@@ -480,7 +480,7 @@ export const SERVICES: Service[] = [
       'Licensed Building Practitioner building work, from decks and fences to full builds, with the site works done in house.',
     seoTitle: 'LBP Builders South Auckland',
     metaDescription:
-      'LBP building work in Papakura and across Auckland from Jai Civil. New builds, decks, fences and structural work, with earthworks and site preparation handled by the same crew.',
+      'LBP building work across Auckland from Jai Civil. New builds, decks, fences and structural work, with earthworks and site preparation handled by the same crew.',
     h1: 'Building work, licensed and done in house',
     intro: [
       'Jai Civil carries out building work under a Licensed Building Practitioner, which means restricted building work is done and signed off by someone licensed to do it.',
@@ -521,7 +521,7 @@ export const SERVICES: Service[] = [
       'Home renovations and kitchen installations, managed end to end by the same team that handles the structural work.',
     seoTitle: 'Home Renovations & Kitchens Auckland',
     metaDescription:
-      'Home renovations and kitchen installations in Papakura and across Auckland. Structural alterations, interior upgrades and kitchens from a contractor with LBP building cover.',
+      'Home renovations and kitchen installations across Auckland. Structural alterations, interior upgrades and kitchens from a contractor with LBP building cover.',
     h1: 'Renovations and kitchens',
     intro: [
       'Renovations go wrong in the gaps between trades. Jai Civil takes on home renovations and kitchen projects as one managed job: demolition, structural changes, building work and the finishing trades coordinated together.',

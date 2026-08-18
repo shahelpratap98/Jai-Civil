@@ -18,7 +18,7 @@ export default function Footer() {
         <div>
           <Logo markSize={42} className="mb-4" />
           <p className="text-sand-300 text-sm leading-relaxed max-w-xs">
-            Papakura based civil, earthworks and building contractor. Auckland, Waikato and New
+            Civil, earthworks and building contractor. Auckland, Waikato and New
             Zealand wide.
           </p>
           <a

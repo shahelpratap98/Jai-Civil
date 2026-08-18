@@ -17,7 +17,7 @@ export const ROUTES: RouteMeta[] = [
     path: '/',
     title: 'Jai Civil Limited: Earthworks & Civil Construction NZ',
     description:
-      'Civil and earthworks contractor with yards in Papakura and Huntly, serving Auckland, the greater Waikato and New Zealand wide. Earthworks, roading, steelfixing, erosion protection, tree felling and building. Free quotes.',
+      'Auckland based civil and earthworks contractor serving Auckland, the greater Waikato and New Zealand wide. Earthworks, roading, steelfixing, erosion protection, tree felling and building. Free quotes.',
     priority: 1.0,
   },
   {
@@ -31,7 +31,7 @@ export const ROUTES: RouteMeta[] = [
     path: '/projects',
     title: `Our Projects: Civil & Building Work Auckland${suffix}`,
     description:
-      'The kind of work Jai Civil takes on across Auckland: earthworks, driveways, site preparation, building and renovation projects from Papakura to the wider region.',
+      'The kind of work Jai Civil takes on across Auckland: earthworks, driveways, site preparation, building and renovation projects across Auckland, the Waikato and beyond.',
     priority: 0.7,
   },
   {

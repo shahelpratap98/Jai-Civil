@@ -33,7 +33,7 @@ export const REVIEWS: Review[] = [
     author: 'Praveen Chand',
     credential: '4 reviews',
     rating: 5,
-    body: 'Awesome service by provider, with amazing skills, very easy to work with and outstanding service. My recommendations to everyone to aquire their services as they are excellent.',
+    body: 'Awesome service by provider, with amazing skills, very easy to work with and outstanding service. My recommendations to everyone to acquire their services as they are excellent.',
   },
   {
     author: 'Porky Ashby',
