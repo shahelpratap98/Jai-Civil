@@ -3,14 +3,13 @@
  * Companies Register (#8175655) and the company's public listings.
  *
  * PLACEHOLDERS (swap before launch):
- *  - url:   no domain registered yet
- *  - email: inquiries inbox not confirmed yet (contact form env vars too)
+ *  - url: no domain registered yet
  */
 export const SITE = {
   name: 'Jai Civil Limited',
   shortName: 'Jai Civil',
   url: 'https://jaicivil.co.nz', // PLACEHOLDER domain
-  email: '', // PLACEHOLDER: unknown, deliberately blank so schema omits it
+  email: 'jaicivilltd@gmail.com', // confirmed by the owner 2026-08-18
   phoneDisplay: '021 215 4714',
   phoneHref: 'tel:+64212154714',
   /** E.164 without "+", as wa.me requires. */

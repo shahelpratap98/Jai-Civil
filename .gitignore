@@ -48,3 +48,6 @@ next-env.d.ts
 
 # full-size photo masters (compressed copies live in public/projects)
 /photo-src
+
+.vercel
+.env*
