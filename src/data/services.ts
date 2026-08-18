@@ -283,8 +283,8 @@ export const SERVICES: Service[] = [
       'Concrete is only as strong as the steel inside it. Jai Civil fixes reinforcing for footings, slabs, retaining walls and structures, tied and spaced to the engineer’s drawings so it passes inspection first time.',
       'Because we also do the excavation and the pour, the steel goes in between our own trades rather than waiting on a separate crew. That is usually where programmes slip.',
     ],
-    image: '/projects/reinforcing-steel.jpg',
-    imageAlt: 'Reinforcing steel cage tied and spaced in a footing trench',
+    image: '/projects/raft-slab-steel.jpg',
+    imageAlt: 'Crew tying reinforcing steel across a raft slab, with void formers, spacers and beam cages inside a shored excavation',
     includesTitle: 'Steelfixing work we do',
     includes: [
       'Footing and foundation cages',
