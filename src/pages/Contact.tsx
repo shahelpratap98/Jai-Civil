@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react';
 import { Phone, MapPin, Clock, MessageCircle, Loader2, CheckCircle2 } from 'lucide-react';
 import Header from '../components/Header';
 import ReviewStrip from '../components/ReviewStrip';
+import { sendEnquiry } from '../lib/sendEnquiry';
 import { SERVICES } from '../data/services';
 import { ALL_AREAS, SITE, whatsappLink } from '../siteConfig';
 
@@ -19,15 +20,14 @@ export default function Contact() {
     setStatus('sending');
     setError('');
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+      await sendEnquiry({
+        name: String(data.name ?? ''),
+        email: String(data.email ?? ''),
+        phone: String(data.phone ?? ''),
+        service: String(data.service ?? ''),
+        message: String(data.message ?? ''),
+        website: String(data.website ?? ''),
       });
-      const body = await res.json().catch(() => ({}));
-      if (!res.ok) {
-        throw new Error(body.error ?? 'Something went wrong sending your message.');
-      }
       setStatus('sent');
       form.reset();
     } catch (err) {

@@ -24,7 +24,18 @@ sitemap and JSON-LD all derive from it. Add or edit services there, then rebuild
 
 ## Contact form
 
-The form POSTs to `api/contact.js` (a Vercel serverless function using Resend).
+The form posts straight to Web3Forms from the browser (`src/lib/sendEnquiry.ts`);
+there is no serverless function. Resend was the original plan but it will only send
+from a verified domain, and there is no domain yet, so its fallback sender only
+reaches the Resend account owner rather than the client's inbox.
+
+Set `WEB3FORMS_ACCESS_KEY` in `src/lib/sendEnquiry.ts`. The key is a public,
+write-only submission token tied to one inbox, not a secret, which is why it can sit
+in client-side code. Enquiries go to jaicivilltd@gmail.com.
+
+Once jaicivil.co.nz is registered and verified in Resend, swap back: only
+`sendEnquiry()` needs to change.
+
 WhatsApp click-to-chat uses +64 21 215 4714 (from the company's public listing).
 
 ## Launch TODOs (placeholders to swap)
