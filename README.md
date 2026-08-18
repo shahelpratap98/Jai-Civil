@@ -29,7 +29,7 @@ there is no serverless function. Resend was the original plan but it will only s
 from a verified domain, and there is no domain yet, so its fallback sender only
 reaches the Resend account owner rather than the client's inbox.
 
-Set `WEB3FORMS_ACCESS_KEY` in `src/lib/sendEnquiry.ts`. The key is a public,
+The key is set in `src/lib/sendEnquiry.ts` and verified working end to end. It is a public,
 write-only submission token tied to one inbox, not a secret, which is why it can sit
 in client-side code. Enquiries go to jaicivilltd@gmail.com.
 
@@ -40,10 +40,6 @@ WhatsApp click-to-chat uses +64 21 215 4714 (from the company's public listing).
 
 ## Launch TODOs (placeholders to swap)
 
-- [ ] **Web3Forms access key**: `WEB3FORMS_ACCESS_KEY` in `src/lib/sendEnquiry.ts` is
-      still a placeholder, so the form shows "not connected yet" and points people at
-      WhatsApp and the phone number. Get the key from web3forms.com (it is emailed to
-      jaicivilltd@gmail.com, which the owner controls) and paste it in.
 - [ ] **Domain**: `https://jaicivil.co.nz` is a placeholder in `src/siteConfig.ts` and
       `scripts/prerender.mjs`. Set the real domain in both. Registering it also unlocks
       Resend with a proper quotes@jaicivil.co.nz sender.
