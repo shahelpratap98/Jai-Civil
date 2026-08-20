@@ -19,7 +19,7 @@ export default function StatsBar() {
   const STATS = [
     { figure: `${years}+`, label: 'Years experience' },
     { figure: REVIEW_SUMMARY.rating.toFixed(1), label: `${REVIEW_SUMMARY.source} rating` },
-    { figure: '2', label: 'Yards, Papakura & Huntly' },
+    { figure: '2', label: 'Yards, Auckland & Huntly' },
     { figure: 'NZ wide', label: 'Coverage' },
   ];
 

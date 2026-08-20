@@ -188,7 +188,7 @@ export default function Contact() {
             <p className="flex items-start gap-3">
               <MapPin size={16} className="mt-0.5 shrink-0" aria-hidden="true" />
               <span>
-                Based in {SITE.address.suburb}, {SITE.address.city} {SITE.address.postcode}
+                Based in {SITE.address.city}
                 <br />
                 Yard at {SITE.depot.suburb}, {SITE.depot.region}
               </span>

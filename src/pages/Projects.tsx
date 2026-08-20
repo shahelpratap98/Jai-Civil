@@ -103,8 +103,7 @@ export default function Projects() {
               </h1>
               <p className="hero-copy text-sand-200 text-base md:text-lg leading-relaxed">
                 Real jobs, straight off our machines: earthworks, roading, foundations and
-                drainage from {SITE.address.suburb} out across Auckland, the Waikato and
-                beyond.
+                drainage across Auckland, the Waikato and beyond.
               </p>
             </div>
           </div>

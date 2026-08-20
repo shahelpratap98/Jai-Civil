@@ -125,9 +125,8 @@ export default function ServicePage() {
               Get a free quote for {service.name.toLowerCase()}
             </h2>
             <p className="max-w-xl text-sand-300 leading-relaxed mb-6">
-              Based in {SITE.address.suburb}, serving Auckland, the Waikato and New Zealand
-              wide. Send
-              through the address and a short description and we will take it from there.
+              Serving Auckland, the Waikato and New Zealand wide. Send through the address
+              and a short description and we will take it from there.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link

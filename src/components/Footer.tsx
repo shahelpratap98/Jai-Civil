@@ -46,7 +46,7 @@ export default function Footer() {
             <p className="flex items-start gap-2">
               <MapPin size={15} className="mt-0.5 shrink-0" aria-hidden="true" />
               <span>
-                {SITE.address.suburb}, {SITE.address.city}
+                {SITE.address.city}
                 <br />
                 Yard at {SITE.depot.suburb}, {SITE.depot.region}
               </span>

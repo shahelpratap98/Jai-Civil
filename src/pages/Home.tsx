@@ -131,7 +131,7 @@ export default function Home() {
           <p className="mt-4 text-sand-300 leading-relaxed">
             One crew from the first cut to the final fit off. We cut and prepare the site, build
             the access and put up the structure under a Licensed Building Practitioner, out of
-            two yards in {SITE.address.suburb} and {SITE.depot.suburb}.
+            two yards in {SITE.address.city} and {SITE.depot.suburb}.
           </p>
         </Reveal>
         <div className="grid gap-5 md:grid-cols-3">
