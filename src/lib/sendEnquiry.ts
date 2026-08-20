@@ -8,7 +8,7 @@
  * client's inbox. Web3Forms has no such restriction, so enquiries reach
  * jaicivilltd@gmail.com today with no DNS work.
  *
- * Swap back to Resend once jaicivil.co.nz is registered and verified: the
+ * Swap back to Resend once jaicivil.com is verified in Resend: the
  * form only calls sendEnquiry(), so the change is confined to this file.
  *
  * The access key is a public, write-only submission token, not a secret. It

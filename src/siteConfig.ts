@@ -8,7 +8,8 @@
 export const SITE = {
   name: 'Jai Civil Limited',
   shortName: 'Jai Civil',
-  url: 'https://jaicivil.co.nz', // PLACEHOLDER domain
+  /** Canonical host. The apex 308s to www, so www is the canonical form. */
+  url: 'https://www.jaicivil.com',
   email: 'jaicivilltd@gmail.com', // confirmed by the owner 2026-08-18
   phoneDisplay: '021 215 4714',
   phoneHref: 'tel:+64212154714',

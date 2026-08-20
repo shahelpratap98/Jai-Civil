@@ -22,9 +22,7 @@ const template = await fs.readFile(path.join(dist, 'index.html'), 'utf-8');
 const escape = (s) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-// PLACEHOLDER domain: no domain registered for Jai Civil yet. Swap here and in
-// src/siteConfig.ts when the real domain exists.
-const SITE_URL = 'https://jaicivil.co.nz';
+const SITE_URL = 'https://www.jaicivil.com';
 
 let written = 0;
 
