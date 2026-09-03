@@ -29,9 +29,9 @@ export const GALLERY: GalleryPhoto[] = [
     caption: 'Fresh metal courses laid and compacted on a rural road.',
   },
   {
-    src: '/projects/road-shoulder-drainage.jpg',
-    alt: 'Excavator and tipper truck working the shoulder of a rural highway behind a cone taper, with traffic queued past the site',
-    caption: 'Shoulder widening and drainage on a main road, under live traffic management.',
+    src: '/projects/road-verge-drain.jpg',
+    alt: 'Yanmar tracked excavator on a sealed rural road with its boom over a freshly dug verge drain, two workers in orange hi-vis alongside',
+    caption: 'Digging the verge drain out on a rural road, machine working off the seal.',
   },
   {
     src: '/projects/road-drain-excavator.jpg',
